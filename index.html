@@ -1,3 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="I'm Just a Girl in Finance — smart money tips, investing guides, Easy Equities tutorials, and how to make money online. Written by women, for women." />
+  <meta name="keywords" content="girl finance, investing for women, easy equities, make money online, where to invest, rose gold finance blog" />
+  <meta name="author" content="Just a Girl in Finance" />
+  <meta property="og:title" content="Just a Girl in Finance — Smart Money for Modern Women" />
+  <meta property="og:description" content="Demystifying investing, wealth-building, and making money online — with a little glam." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <title>Just a Girl in Finance 💸 | Smart Money for Modern Women</title>
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ═══════════════════════════════════════
+       DESIGN TOKENS — Rose Gold Editorial
+    ═══════════════════════════════════════ */
+    :root {
+      --cream:      #fdf8f5;
+      --cream2:     #faf3ee;
+      --blush:      #f9e8e0;
+      --rose:       #e8b4a0;
+      --rose-dark:  #c8876d;
+      --rosegold:   #b87c6a;
+      --deep:       #8b4f3f;
+      --mauve:      #c9a0a0;
+      --nude:       #e8d5cd;
+      --text:       #2c1f1a;
+      --text-light: #7a5a52;
+      --text-muted: #b09090;
+      --white:      #ffffff;
+      --border:     #edddd6;
+      --shadow:     rgba(180, 100, 80, 0.12);
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'Jost', sans-serif;
+      --radius:     12px;
+      --radius-sm:  8px;
+      --max-w:      1200px;
+      --transition: 0.25s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; transition: color var(--transition); }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { list-style: none; }
+
+    /* ═══════════════════════════════════════
+       LAYOUT
+    ═══════════════════════════════════════ */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ═══════════════════════════════════════
+       AD SLOTS
+    ═══════════════════════════════════════ */
+    .ad-slot {
+      background: linear-gradient(135deg, #fdf0eb 0%, #f9e8e0 100%);
+      border: 1.5px dashed var(--rose);
+      border-radius: var(--radius-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: center;
+      gap: 4px;
+    }
+    .ad-slot .ad-icon { font-size: 20px; opacity: 0.5; }
+    .ad-leaderboard  { width: 100%; height: 90px; }
+    .ad-rectangle    { width: 100%; height: 250px; }
+    .ad-half-page    { width: 100%; height: 600px; }
+    .ad-in-content   { width: 100%; height: 250px; margin: 36px 0; }
+    .ad-footer       { width: 100%; height: 90px; }
+    .ad-mobile       { width: 100%; height: 100px; display: none; }
+    @media(max-width:600px) {
+      .ad-leaderboard { display: none; }
+      .ad-mobile      { display: flex; }
+      .ad-half-page   { height: 300px; }
+    }
+
+    /* ═══════════════════════════════════════
+       TOP ANNOUNCEMENT BAR
+    ═══════════════════════════════════════ */
+    .announcement-bar {
+      background: linear-gradient(90deg, var(--rosegold), var(--deep), var(--rosegold));
+      background-size: 200% 100%;
+      animation: shimmer 6s ease infinite;
+      color: var(--white);
+      text-align: center;
+      padding: 9px 24px;
+      font-size: 12.5px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+    }
+    @keyframes shimmer { 0%,100% { background-position:0% 50%; } 50% { background-position:100% 50%; } }
+    .announcement-bar a { color: var(--white); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+    /* ═══════════════════════════════════════
+       HEADER
+    ═══════════════════════════════════════ */
+    header {
+      background: rgba(253,248,245,0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 20px;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .logo-top {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .logo-sub {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rosegold);
+    }
+    .logo-accent { color: var(--rosegold); }
+
+    nav { display: flex; align-items: center; gap: 4px; }
+    nav a {
+      padding: 8px 15px;
+      border-radius: 99px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-light);
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    nav a:hover, nav a.active {
+      background: var(--blush);
+      color: var(--rosegold);
+    }
+    .nav-cta {
+      background: var(--rosegold) !important;
+      color: var(--white) !important;
+      padding: 9px 20px !important;
+    }
+    .nav-cta:hover { background: var(--deep) !important; transform: translateY(-1px); box-shadow: 0 4px 16px var(--shadow); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all var(--transition);
+    }
+
+    @media(max-width:820px) {
+      nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--border); flex-direction: column; padding: 16px 24px; gap: 4px; box-shadow: 0 8px 32px var(--shadow); }
+      nav.open { display: flex; }
+      nav a { width: 100%; border-radius: var(--radius-sm); }
+      .hamburger { display: flex; }
+    }
+
+    /* ═══════════════════════════════════════
+       TOP AD BANNER
+    ═══════════════════════════════════════ */
+    .top-ad-wrap { padding: 12px 0; background: var(--cream2); border-bottom: 1px solid var(--border); }
+
+    /* ═══════════════════════════════════════
+       HERO — HOMEPAGE
+    ═══════════════════════════════════════ */
+    .hero {
+      padding: 64px 0 56px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--cream2) 0%, var(--cream) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(232,180,160,0.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--blush);
+      border: 1px solid var(--rose);
+      border-radius: 99px;
+      padding: 6px 18px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--rosegold);
+      margin-bottom: 24px;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(42px, 7vw, 80px);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      max-width: 780px;
+      margin: 0 auto 20px;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--rosegold);
+      font-weight: 600;
+    }
+    .hero-sub {
+      font-size: 17px;
+      color: var(--text-light);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      font-weight: 400;
+      line-height: 1.7;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       gap: 14px;
       flex-wrap: wrap;
       animation: fadeUp 0.7s 0.3s ease both;
@@ -913,7 +1184,7 @@
               <h2>How I Started Investing on Easy Equities With Just R500 (And You Can Too)</h2>
               <p class="post-excerpt">I was terrified of investing. Then I opened an Easy Equities account on a Sunday afternoon with R500 and everything changed. Here's exactly what I did, step by step.</p>
               <div class="post-meta">
-                <span>By Mia Laurent</span>
+                <span>By Amora</span>
                 <span class="meta-sep">·</span>
                 <span>March 2, 2025</span>
                 <span class="meta-sep">·</span>
@@ -1141,16 +1412,28 @@
       <span class="cat-pill">💳 Budgeting</span>
       <span class="cat-pill">₿ Crypto</span>
     </div>
-    <div class="blog-grid">
+        <div class="blog-grid">
+      <!-- ✏️ ADD NEW POSTS HERE — copy a block and paste it after this line -->
       <article class="post-card" onclick="navigate('article-equities')"><div class="card-img"><span class="emoji">📱</span></div><div class="card-body"><span class="post-tag">Easy Equities</span><h3 class="card-title">How I Started on Easy Equities With Just R500</h3><p class="card-excerpt">Step-by-step beginner guide to SA's top investing app.</p><div class="post-meta"><span class="read-time">8 min</span><span class="meta-sep">·</span><span>Mar 2</span></div></div></article>
       <article class="post-card" onclick="navigate('article-index')"><div class="card-img card-img-2"><span class="emoji">📊</span></div><div class="card-body"><span class="post-tag">Investing</span><h3 class="card-title">The 5 Best ETFs to Buy in South Africa Right Now</h3><p class="card-excerpt">Low fees, instant diversification, R100 minimum.</p><div class="post-meta"><span class="read-time">6 min</span><span class="meta-sep">·</span><span>Feb 28</span></div></div></article>
       <article class="post-card" onclick="navigate('article-money-online')"><div class="card-img card-img-3"><span class="emoji">💻</span></div><div class="card-body"><span class="post-tag">Make Money Online</span><h3 class="card-title">7 Ways I Make Money Online (Real Numbers) <span class="badge-new">New</span></h3><p class="card-excerpt">Honest income report with actual figures.</p><div class="post-meta"><span class="read-time">10 min</span><span class="meta-sep">·</span><span>Feb 25</span></div></div></article>
-      <article class="post-card" onclick="navigate('blog')"><div class="card-img card-img-4"><span class="emoji">🏦</span></div><div class="card-body"><span class="post-tag">Budgeting</span><h3 class="card-title">The 'Latte Factor' is a Lie — What Actually Moves the Needle</h3><p class="card-excerpt">Stop blaming your coffee. Here's what actually builds wealth.</p><div class="post-meta"><span class="read-time">5 min</span><span class="meta-sep">·</span><span>Feb 22</span></div></div></article>
-      <article class="post-card" onclick="navigate('blog')"><div class="card-img card-img-5"><span class="emoji">₿</span></div><div class="card-body"><span class="post-tag">Crypto</span><h3 class="card-title">Is Crypto Still Worth It in 2025? My Honest Take</h3><p class="card-excerpt">The truth about crypto after holding through a bear market.</p><div class="post-meta"><span class="read-time">6 min</span><span class="meta-sep">·</span><span>Feb 16</span></div></div></article>
-      <article class="post-card" onclick="navigate('blog')"><div class="card-img card-img-6"><span class="emoji">🏠</span></div><div class="card-body"><span class="post-tag">Real Estate</span><h3 class="card-title">Buy vs. Rent in 2025: The Real Math</h3><p class="card-excerpt">I did the numbers so you don't have to.</p><div class="post-meta"><span class="read-time">7 min</span><span class="meta-sep">·</span><span>Feb 19</span></div></div></article>
-      <article class="post-card" onclick="navigate('blog')"><div class="card-img"><span class="emoji">🧾</span></div><div class="card-body"><span class="post-tag">Tax & SARS</span><h3 class="card-title">SARS Tax Season 2025: What Every Investor Needs to Know</h3><p class="card-excerpt">CGT, dividends, and what to declare — simplified.</p><div class="post-meta"><span class="read-time">9 min</span><span class="meta-sep">·</span><span>Feb 12</span></div></div></article>
-      <article class="post-card" onclick="navigate('blog')"><div class="card-img card-img-2"><span class="emoji">💰</span></div><div class="card-body"><span class="post-tag">Investing</span><h3 class="card-title">Dividend Investing for Beginners: Earn While You Sleep</h3><p class="card-excerpt">Build a portfolio that pays you every quarter.</p><div class="post-meta"><span class="read-time">8 min</span><span class="meta-sep">·</span><span>Feb 5</span></div></div></article>
-      <article class="post-card" onclick="navigate('blog')"><div class="card-img card-img-3"><span class="emoji">💳</span></div><div class="card-body"><span class="post-tag">Budgeting</span><h3 class="card-title">I Tracked Every Rand for 30 Days — Here's What I Found</h3><p class="card-excerpt">A full spending audit that changed how I manage money.</p><div class="post-meta"><span class="read-time">5 min</span><span class="meta-sep">·</span><span>Feb 8</span></div></div></article>
+      <article class="post-card" onclick="navigate('article-crypto')"><div class="card-img card-img-5"><span class="emoji">₿</span></div><div class="card-body"><span class="post-tag">Crypto</span><h3 class="card-title">Is Crypto Worth It in 2025? Everything a Beginner Needs to Know</h3><p class="card-excerpt">Bitcoin, Ethereum, and digital currency explained simply.</p><div class="post-meta"><span class="read-time">7 min</span><span class="meta-sep">·</span><span>Mar 14</span></div></div></article>
+      <article class="post-card" onclick="navigate('article-tfsa')"><div class="card-img card-img-2"><span class="emoji">🏦</span></div><div class="card-body"><span class="post-tag">Investing</span><h3 class="card-title">The TFSA: The Most Powerful Account Nobody Talks About</h3><p class="card-excerpt">Tax-free growth, dividends, and capital gains. Here's how to use it.</p><div class="post-meta"><span class="read-time">6 min</span><span class="meta-sep">·</span><span>Mar 10</span></div></div></article>
+      <article class="post-card" onclick="navigate('article-budget')"><div class="card-img card-img-4"><span class="emoji">💳</span></div><div class="card-body"><span class="post-tag">Budgeting</span><h3 class="card-title">How to Budget Like a Boss With an Irregular Income</h3><p class="card-excerpt">The flexible budgeting system that works for freelancers and side hustlers.</p><div class="post-meta"><span class="read-time">6 min</span><span class="meta-sep">·</span><span>Mar 8</span></div></div></article>
+      <article class="post-card" onclick="navigate('article-sidehustle')"><div class="card-img card-img-3"><span class="emoji">🚀</span></div><div class="card-body"><span class="post-tag">Make Money Online</span><h3 class="card-title">5 Side Hustles You Can Start This Weekend With Zero Capital</h3><p class="card-excerpt">Real ways to earn extra income with nothing but your phone and laptop.</p><div class="post-meta"><span class="read-time">8 min</span><span class="meta-sep">·</span><span>Mar 6</span></div></div></article>
+      <article class="post-card" onclick="navigate('article-debt')"><div class="card-img card-img-6"><span class="emoji">💪</span></div><div class="card-body"><span class="post-tag">Budgeting</span><h3 class="card-title">How I Paid Off R45,000 of Debt in 18 Months</h3><p class="card-excerpt">The exact debt snowball method I used on an average salary.</p><div class="post-meta"><span class="read-time">9 min</span><span class="meta-sep">·</span><span>Mar 4</span></div></div></article>
+      <article class="post-card" onclick="navigate('article-emergency')"><div class="card-img"><span class="emoji">🛡️</span></div><div class="card-body"><span class="post-tag">Budgeting</span><h3 class="card-title">Why Your Emergency Fund Is the Most Important Investment You'll Make</h3><p class="card-excerpt">Before ETFs, before crypto — build this first.</p><div class="post-meta"><span class="read-time">5 min</span><span class="meta-sep">·</span><span>Mar 1</span></div></div></article>
+      <article class="post-card" onclick="navigate('article-credit')"><div class="card-img card-img-2"><span class="emoji">📋</span></div><div class="card-body"><span class="post-tag">Budgeting</span><h3 class="card-title">Your Credit Score Explained: How to Check, Fix, and Use It</h3><p class="card-excerpt">Your credit score is worth hundreds of thousands of rands. Here's why.</p><div class="post-meta"><span class="read-time">7 min</span><span class="meta-sep">·</span><span>Feb 24</span></div></div></article>
+      <article class="post-card" onclick="navigate('article-sars')"><div class="card-img card-img-4"><span class="emoji">🧾</span></div><div class="card-body"><span class="post-tag">Tax & SARS</span><h3 class="card-title">SARS Tax Season 2025: A Simple Guide for Investors</h3><p class="card-excerpt">What to declare, how to submit, and how to pay less tax legally.</p><div class="post-meta"><span class="read-time">9 min</span><span class="meta-sep">·</span><span>Feb 20</span></div></div></article>
+      <article class="post-card" onclick="navigate('article-retirement')"><div class="card-img card-img-5"><span class="emoji">🌅</span></div><div class="card-body"><span class="post-tag">Investing</span><h3 class="card-title">Retirement in Your 20s and 30s: Why Starting Now Changes Everything</h3><p class="card-excerpt">The compound interest math that will make you open a retirement account today.</p><div class="post-meta"><span class="read-time">8 min</span><span class="meta-sep">·</span><span>Feb 17</span></div></div></article>
+      <article class="post-card" onclick="navigate('article-firstsalary')"><div class="card-img card-img-3"><span class="emoji">🎓</span></div><div class="card-body"><span class="post-tag">Budgeting</span><h3 class="card-title">What to Do With Your First Salary: The 5-Step Money Plan for Graduates</h3><p class="card-excerpt">The plan I wish I had when I got my first paycheck.</p><div class="post-meta"><span class="read-time">6 min</span><span class="meta-sep">·</span><span>Feb 14</span></div></div></article>
+      <article class="post-card" onclick="navigate('blog')"><div class="card-img"><span class="emoji">🏠</span></div><div class="card-body"><span class="post-tag">Real Estate</span><h3 class="card-title">Buy vs. Rent in 2025: The Real Math for SA Women</h3><p class="card-excerpt">I ran the actual numbers. The answer might surprise you.</p><div class="post-meta"><span class="read-time">7 min</span><span class="meta-sep">·</span><span>Feb 19</span></div></div></article>
+      <article class="post-card" onclick="navigate('blog')"><div class="card-img card-img-6"><span class="emoji">💰</span></div><div class="card-body"><span class="post-tag">Investing</span><h3 class="card-title">Dividend Investing for Beginners: Earn While You Sleep</h3><p class="card-excerpt">Build a portfolio that pays you every quarter.</p><div class="post-meta"><span class="read-time">8 min</span><span class="meta-sep">·</span><span>Feb 5</span></div></div></article>
+      <article class="post-card" onclick="navigate('blog')"><div class="card-img card-img-2"><span class="emoji">📈</span></div><div class="card-body"><span class="post-tag">Investing</span><h3 class="card-title">The 'Latte Factor' is a Lie — What Actually Builds Wealth</h3><p class="card-excerpt">Stop blaming your coffee. Here's what actually moves the needle.</p><div class="post-meta"><span class="read-time">5 min</span><span class="meta-sep">·</span><span>Feb 22</span></div></div></article>
+      <article class="post-card" onclick="navigate('blog')"><div class="card-img card-img-4"><span class="emoji">💸</span></div><div class="card-body"><span class="post-tag">Make Money Online</span><h3 class="card-title">How to Make Money on Pinterest: A Beginner's Guide for SA Women</h3><p class="card-excerpt">Pinterest is not just pretty pictures — it's a traffic and income machine.</p><div class="post-meta"><span class="read-time">7 min</span><span class="meta-sep">·</span><span>Feb 10</span></div></div></article>
+      <article class="post-card" onclick="navigate('blog')"><div class="card-img card-img-3"><span class="emoji">🌍</span></div><div class="card-body"><span class="post-tag">Investing</span><h3 class="card-title">Offshore Investing for South Africans: How to Get USD Exposure</h3><p class="card-excerpt">Protect your wealth from rand weakness by investing globally.</p><div class="post-meta"><span class="read-time">8 min</span><span class="meta-sep">·</span><span>Feb 7</span></div></div></article>
+      <article class="post-card" onclick="navigate('blog')"><div class="card-img card-img-6"><span class="emoji">🤝</span></div><div class="card-body"><span class="post-tag">Budgeting</span><h3 class="card-title">How to Talk About Money With Your Partner Without Fighting</h3><p class="card-excerpt">Money is the number one cause of relationship stress. Here's how to fix that.</p><div class="post-meta"><span class="read-time">6 min</span><span class="meta-sep">·</span><span>Feb 3</span></div></div></article>
+      <article class="post-card" onclick="navigate('blog')"><div class="card-img"><span class="emoji">✨</span></div><div class="card-body"><span class="post-tag">Investing</span><h3 class="card-title">My Honest Net Worth Update: Where I Started and Where I Am Now</h3><p class="card-excerpt">Full transparency — my assets, debts, and portfolio value revealed.</p><div class="post-meta"><span class="read-time">10 min</span><span class="meta-sep">·</span><span>Jan 30</span></div></div></article>
     </div>
     <!-- Pagination placeholder -->
     <div style="text-align:center; padding-bottom:48px;">
@@ -1183,7 +1466,7 @@
       <span class="post-tag">💼 Easy Equities</span>
       <h1 class="article-title">How I Started Investing on Easy Equities With Just R500 (And You Can Too)</h1>
       <div class="post-meta" style="margin-top:16px; font-size:13px;">
-        <span>By <strong>Mia Laurent</strong></span>
+        <span>By <strong>Amora</strong></span>
         <span class="meta-sep">·</span>
         <span>March 2, 2025</span>
         <span class="meta-sep">·</span>
@@ -1377,7 +1660,7 @@
       <span class="post-tag">📊 Investing</span>
       <h1 class="article-title">The 5 Best ETFs to Buy in South Africa Right Now</h1>
       <div class="post-meta" style="margin-top:16px; font-size:13px;">
-        <span>By <strong>Mia Laurent</strong></span><span class="meta-sep">·</span>
+        <span>By <strong>Amora</strong></span><span class="meta-sep">·</span>
         <span>February 28, 2025</span><span class="meta-sep">·</span>
         <span class="read-time">6 min read</span>
       </div>
@@ -1474,7 +1757,7 @@
       <span class="post-tag">💰 Make Money Online</span>
       <h1 class="article-title">7 Ways I Make Money Online (Real Numbers, No BS)</h1>
       <div class="post-meta" style="margin-top:16px;font-size:13px;">
-        <span>By <strong>Mia Laurent</strong></span><span class="meta-sep">·</span>
+        <span>By <strong>Amora</strong></span><span class="meta-sep">·</span>
         <span>February 25, 2025</span><span class="meta-sep">·</span>
         <span class="read-time">10 min read</span>
       </div>
@@ -1756,6 +2039,11 @@
     if (target) {
       target.classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // fallback to blog page if article not found
+      const blog = document.getElementById('page-blog');
+      if (blog) blog.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     // Update active nav link
     document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
@@ -1856,6 +2144,467 @@ function subscribeBrevoMain() {
   btn.disabled = true;
 }
 </script>
+
+
+
+<!-- ═══════════════════════════════════════════════════
+     ARTICLE: CRYPTO 2025
+═══════════════════════════════════════════════════ -->
+<main id="page-article-crypto" class="page" role="main">
+  <div class="container article-wrap">
+    <button class="back-btn" onclick="navigate('blog')">← Back to Blog</button>
+    <div class="ad-slot ad-leaderboard" style="margin-bottom:28px;"><div class="ad-label">Advertisement</div><span>Google AdSense — Leaderboard 728×90</span></div>
+    <header class="article-header">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#" onclick="navigate('home');return false;">Home</a><span class="breadcrumb-sep">/</span><a href="#" onclick="navigate('blog');return false;">Blog</a><span class="breadcrumb-sep">/</span><span>Crypto</span></nav>
+      <span class="post-tag">₿ Crypto</span>
+      <h1 class="article-title">Is Crypto Worth It in 2025? Everything a Beginner Girl Needs to Know</h1>
+      <div class="post-meta" style="margin-top:16px;font-size:13px;"><span>By <strong>Amora</strong></span><span class="meta-sep">·</span><span>March 14, 2025</span><span class="meta-sep">·</span><span class="read-time">7 min read</span></div>
+    </header>
+    <div class="article-hero-img" role="img">₿</div>
+    <div class="article-grid">
+      <div>
+        <div class="article-body">
+          <p>Let's be honest. When someone first mentioned Bitcoin to me I thought it was fake internet money for nerds. I ignored it for years. Then I watched people turn R1,000 into R50,000 and I started paying attention.</p>
+          <p>But I also watched people lose everything chasing hype. So today I'm giving you the balanced, honest truth about crypto in 2025.</p>
+          <div class="callout"><div class="callout-title">✨ Disclaimer</div><p>This is not financial advice. Cryptocurrency is highly volatile. Please do your own research before investing.</p></div>
+          <h2>What Exactly Is Cryptocurrency?</h2>
+          <p>Cryptocurrency is digital money that exists only online. Unlike rands or dollars, no government or bank controls it. It runs on technology called <strong>blockchain</strong> — a public record of every transaction that nobody can fake or delete. The most well-known are Bitcoin (BTC), Ethereum (ETH), and stablecoins like USDC.</p>
+          <h2>Why Do People Invest in Crypto?</h2>
+          <p>Three main reasons: potential for massive growth, protection against inflation, and access to dollar-denominated assets without needing a foreign bank account. For South Africans watching the rand weaken, that last point is particularly powerful.</p>
+          <div class="ad-slot ad-in-content"><div class="ad-label">Advertisement</div><span>AdSense — In-Content 336×280</span></div>
+          <h2>The Real Risks Nobody Talks About</h2>
+          <p>Crypto is extremely volatile. Bitcoin has dropped 80% in value before — and recovered. But not everyone held through that drop. Many people panic sold at the bottom and lost everything. There are also scams everywhere. If anyone promises guaranteed crypto returns — run. It is always a scam.</p>
+          <h2>How Much Should You Put In?</h2>
+          <p>Most experts suggest no more than 5–10% of your portfolio in crypto. Build your foundation first: emergency fund, TFSA maxed with ETFs, then consider crypto with money you can genuinely afford to lose.</p>
+          <h2>How to Buy Crypto Safely in South Africa</h2>
+          <ul>
+            <li><strong>Luno</strong> — most popular in SA, very beginner friendly</li>
+            <li><strong>VALR</strong> — more advanced, lower fees</li>
+            <li><strong>Easy Crypto SA</strong> — buy and hold in your own wallet</li>
+          </ul>
+          <h2>My Bottom Line</h2>
+          <p>Crypto is real. The opportunity is real. But so is the risk. Go in with your eyes open, start small, and never invest money you cannot afford to lose. You are already ahead of most people just by educating yourself first.</p>
+          <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Is crypto legal in South Africa?</span><span class="faq-icon">+</span></div><div class="faq-a">Yes. Crypto assets are legal in South Africa and regulated by the FSCA. Platforms like Luno and VALR are registered with the FSCA.</div></div>
+            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Do I pay tax on crypto profits?</span><span class="faq-icon">+</span></div><div class="faq-a">Yes. SARS treats crypto gains as taxable income or capital gains depending on your activity. Keep records of all your transactions.</div></div>
+            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>What is the minimum I can invest in crypto?</span><span class="faq-icon">+</span></div><div class="faq-a">On Luno you can buy Bitcoin from as little as R50. You don't need to buy a whole Bitcoin — you buy a fraction.</div></div>
+          </section>
+        </div>
+      </div>
+      <aside class="sidebar">
+        <div class="widget newsletter-widget"><div class="widget-header">💌 Free Newsletter</div><div class="widget-body"><div class="newsletter-icon">💌</div><h3>Money Notes, Weekly</h3><p>One money tip every Sunday. Free forever.</p><input type="email" id="sidebar-email-c1" class="newsletter-input" placeholder="your@email.com"/><button id="sidebar-btn-c1" class="newsletter-btn" onclick="subscribeBrevo('sidebar-email-c1','sidebar-btn-c1')">Subscribe →</button></div></div>
+        <div class="widget" style="overflow:hidden;"><div class="widget-header">Advertisement</div><div class="ad-slot ad-sidebar" style="border:none;border-radius:0;"><span>AdSense 300×600</span></div></div>
+        <div class="widget" style="overflow:hidden;"><div class="widget-header">Advertisement</div><div class="ad-slot ad-rectangle" style="border:none;border-radius:0;"><span>AdSense 300×250</span></div></div>
+      </aside>
+    </div>
+    <div class="ad-slot" style="height:200px;margin-top:40px;"><div class="ad-label">Advertisement</div><span>AdSense — Post-Article</span></div>
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════════
+     ARTICLE: TFSA GUIDE
+═══════════════════════════════════════════════════ -->
+<main id="page-article-tfsa" class="page" role="main">
+  <div class="container article-wrap">
+    <button class="back-btn" onclick="navigate('blog')">← Back to Blog</button>
+    <div class="ad-slot ad-leaderboard" style="margin-bottom:28px;"><div class="ad-label">Advertisement</div><span>Google AdSense — Leaderboard 728×90</span></div>
+    <header class="article-header">
+      <nav class="breadcrumb"><a href="#" onclick="navigate('home');return false;">Home</a><span class="breadcrumb-sep">/</span><a href="#" onclick="navigate('blog');return false;">Blog</a><span class="breadcrumb-sep">/</span><span>Investing</span></nav>
+      <span class="post-tag">📈 Investing</span>
+      <h1 class="article-title">The TFSA: The Most Powerful Account in South Africa That Nobody Talks About</h1>
+      <div class="post-meta" style="margin-top:16px;font-size:13px;"><span>By <strong>Amora</strong></span><span class="meta-sep">·</span><span>March 10, 2025</span><span class="meta-sep">·</span><span class="read-time">6 min read</span></div>
+    </header>
+    <div class="article-hero-img">🏦</div>
+    <div class="article-grid">
+      <div><div class="article-body">
+        <p>When I first heard about the Tax-Free Savings Account I genuinely thought it was too good to be true. No tax on growth. No tax on dividends. No tax when you sell. The government literally designed an account to help you build wealth and most South Africans have no idea it exists.</p>
+        <h2>What Is a TFSA?</h2>
+        <p>A Tax-Free Savings Account (TFSA) is a special investment account where everything you earn inside it is completely tax free. You can contribute up to <strong>R36,000 per year</strong> and a <strong>lifetime maximum of R500,000</strong>. Every rand of growth, every dividend, every capital gain — the government takes nothing.</p>
+        <h2>Why Is This Such a Big Deal?</h2>
+        <p>Normally when you invest outside a TFSA, SARS takes: 20% tax on dividends, up to 18% capital gains tax when you sell, and income tax on interest earned. Inside a TFSA? Zero. Nothing. All yours.</p>
+        <div class="ad-slot ad-in-content"><div class="ad-label">Advertisement</div><span>AdSense — In-Content</span></div>
+        <h2>How to Open a TFSA on Easy Equities</h2>
+        <ul>
+          <li>Download the Easy Equities app</li>
+          <li>Register and verify your identity</li>
+          <li>Select "TFSA" as your account type</li>
+          <li>Fund it with as little as R100</li>
+          <li>Buy your first ETF</li>
+        </ul>
+        <h2>What Should You Buy Inside Your TFSA?</h2>
+        <p>Keep it simple. The Satrix MSCI World ETF or the Satrix S&P 500 ETF are perfect TFSA investments. Low fees, global diversification, and long-term growth potential that compounds beautifully inside a tax-free wrapper.</p>
+        <h2>The One Mistake to Avoid</h2>
+        <p>Never withdraw from your TFSA unless it is an absolute emergency. When you withdraw, you lose that contribution room forever. You cannot put it back. Treat your TFSA as untouchable until retirement.</p>
+        <blockquote>"The TFSA is not a savings account. It is a wealth-building machine. Treat it accordingly."</blockquote>
+        <section class="faq-section"><h2>Frequently Asked Questions</h2>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Can I have more than one TFSA?</span><span class="faq-icon">+</span></div><div class="faq-a">You can have multiple TFSAs at different providers but your total contributions across all accounts cannot exceed R36,000 per year. SARS tracks this and will tax you heavily if you over-contribute.</div></div>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>What happens if I over-contribute?</span><span class="faq-icon">+</span></div><div class="faq-a">SARS charges a 40% penalty tax on the excess contribution. Always track your contributions carefully.</div></div>
+        </section>
+      </div></div>
+      <aside class="sidebar">
+        <div class="widget newsletter-widget"><div class="widget-header">💌 Newsletter</div><div class="widget-body"><div class="newsletter-icon">💌</div><h3>Money Notes</h3><p>Weekly tips, free forever.</p><input type="email" id="sidebar-email-t1" class="newsletter-input" placeholder="your@email.com"/><button id="sidebar-btn-t1" class="newsletter-btn" onclick="subscribeBrevo('sidebar-email-t1','sidebar-btn-t1')">Subscribe →</button></div></div>
+        <div class="widget" style="overflow:hidden;"><div class="widget-header">Advertisement</div><div class="ad-slot ad-sidebar" style="border:none;border-radius:0;"><span>AdSense 300×600</span></div></div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════════
+     ARTICLE: BUDGET LIKE A BOSS
+═══════════════════════════════════════════════════ -->
+<main id="page-article-budget" class="page" role="main">
+  <div class="container article-wrap">
+    <button class="back-btn" onclick="navigate('blog')">← Back to Blog</button>
+    <div class="ad-slot ad-leaderboard" style="margin-bottom:28px;"><div class="ad-label">Advertisement</div><span>Google AdSense — Leaderboard 728×90</span></div>
+    <header class="article-header">
+      <nav class="breadcrumb"><a href="#" onclick="navigate('home');return false;">Home</a><span class="breadcrumb-sep">/</span><a href="#" onclick="navigate('blog');return false;">Blog</a><span class="breadcrumb-sep">/</span><span>Budgeting</span></nav>
+      <span class="post-tag">💳 Budgeting</span>
+      <h1 class="article-title">How to Budget Like a Boss When You Have an Irregular Income</h1>
+      <div class="post-meta" style="margin-top:16px;font-size:13px;"><span>By <strong>Amora</strong></span><span class="meta-sep">·</span><span>March 8, 2025</span><span class="meta-sep">·</span><span class="read-time">6 min read</span></div>
+    </header>
+    <div class="article-hero-img">💳</div>
+    <div class="article-grid">
+      <div><div class="article-body">
+        <p>The standard budgeting advice assumes you earn the same amount every month. But what if you freelance, run a side hustle, or work on commission? What if some months you earn R8,000 and others you earn R25,000? The usual rules don't work for you — and that's okay. Here's a system that does.</p>
+        <h2>The Problem With Traditional Budgeting</h2>
+        <p>Most budgeting methods like the 50/30/20 rule assume fixed income. When your income fluctuates, trying to stick to fixed categories creates constant stress and guilt. Instead we need a flexible system built around your lowest expected income.</p>
+        <h2>Step 1 — Find Your Baseline Income</h2>
+        <p>Look at your last 6 months of income. Find the lowest month. That number is your baseline — the amount you will always budget around. Everything above that is a bonus.</p>
+        <div class="ad-slot ad-in-content"><div class="ad-label">Advertisement</div><span>AdSense — In-Content</span></div>
+        <h2>Step 2 — Cover the Non-Negotiables First</h2>
+        <p>From your baseline income, pay these first: rent or bond, groceries, transport, utilities, minimum debt payments. These are survival expenses. Everything else is negotiable.</p>
+        <h2>Step 3 — The Bonus Waterfall</h2>
+        <p>When you earn above your baseline, use a waterfall approach: first top up your emergency fund to 3 months expenses, then invest in your TFSA, then pay extra on debt, then lifestyle spending. Every extra rand has a job before you spend it.</p>
+        <h2>Step 4 — Pay Yourself a Salary</h2>
+        <p>Open a separate bank account. Every month transfer a fixed "salary" to your main account from your income account. This creates artificial stability even when your income isn't stable.</p>
+        <blockquote>"Budgeting with irregular income is not about restriction. It is about intentionality."</blockquote>
+        <section class="faq-section"><h2>Frequently Asked Questions</h2>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>How big should my emergency fund be as a freelancer?</span><span class="faq-icon">+</span></div><div class="faq-a">As a freelancer aim for 6 months of expenses rather than the standard 3 months. Your income is less predictable so you need a larger buffer.</div></div>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Should I still invest when income is low?</span><span class="faq-icon">+</span></div><div class="faq-a">Even R100 per month invested consistently beats waiting for the perfect month. Consistency matters more than amount when you are starting out.</div></div>
+        </section>
+      </div></div>
+      <aside class="sidebar">
+        <div class="widget newsletter-widget"><div class="widget-header">💌 Newsletter</div><div class="widget-body"><div class="newsletter-icon">💌</div><h3>Money Notes</h3><p>Weekly tips, free forever.</p><input type="email" id="sidebar-email-b1" class="newsletter-input" placeholder="your@email.com"/><button id="sidebar-btn-b1" class="newsletter-btn" onclick="subscribeBrevo('sidebar-email-b1','sidebar-btn-b1')">Subscribe →</button></div></div>
+        <div class="widget" style="overflow:hidden;"><div class="widget-header">Advertisement</div><div class="ad-slot ad-sidebar" style="border:none;border-radius:0;"><span>AdSense 300×600</span></div></div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════════
+     ARTICLE: SIDE HUSTLE
+═══════════════════════════════════════════════════ -->
+<main id="page-article-sidehustle" class="page" role="main">
+  <div class="container article-wrap">
+    <button class="back-btn" onclick="navigate('blog')">← Back to Blog</button>
+    <div class="ad-slot ad-leaderboard" style="margin-bottom:28px;"><div class="ad-label">Advertisement</div><span>Google AdSense — Leaderboard 728×90</span></div>
+    <header class="article-header">
+      <nav class="breadcrumb"><a href="#" onclick="navigate('home');return false;">Home</a><span class="breadcrumb-sep">/</span><a href="#" onclick="navigate('blog');return false;">Blog</a><span class="breadcrumb-sep">/</span><span>Make Money Online</span></nav>
+      <span class="post-tag">💰 Make Money Online</span>
+      <h1 class="article-title">5 Side Hustles You Can Start This Weekend With Zero Startup Capital</h1>
+      <div class="post-meta" style="margin-top:16px;font-size:13px;"><span>By <strong>Amora</strong></span><span class="meta-sep">·</span><span>March 6, 2025</span><span class="meta-sep">·</span><span class="read-time">8 min read</span></div>
+    </header>
+    <div class="article-hero-img">🚀</div>
+    <div class="article-grid">
+      <div><div class="article-body">
+        <p>You don't need money to make money. I know that sounds like a cliché but I have done it. Every income stream I started began with nothing but my laptop, my phone, and a willingness to show up consistently. Here are 5 real side hustles that require zero upfront investment.</p>
+        <h2>1. Freelance Writing</h2>
+        <p>If you can write clearly and explain things simply, companies will pay you for it. Finance, tech, health, and lifestyle brands constantly need blog content. Start on platforms like Upwork or PeoplePerHour. Charge R3 to R5 per word as a beginner. Build up to R10 to R20 per word with experience. I know writers earning R30,000 per month from their laptops.</p>
+        <h2>2. Virtual Assistant</h2>
+        <p>Businesses need help with emails, scheduling, social media, and admin. A virtual assistant does all of this remotely. No special skills required — just organisation and reliability. Rates start at R150 to R300 per hour. Find clients on LinkedIn or through Facebook groups.</p>
+        <div class="ad-slot ad-in-content"><div class="ad-label">Advertisement</div><span>AdSense — In-Content</span></div>
+        <h2>3. Social Media Management</h2>
+        <p>Small businesses know they need Instagram and Facebook but most owners hate doing it. If you enjoy social media and understand how it works you can manage accounts for local businesses. Charge R1,500 to R5,000 per month per client. Get 3 clients and that is R15,000 extra per month.</p>
+        <h2>4. Selling Digital Products</h2>
+        <p>Create once, sell forever. Budget templates, meal planners, social media caption packs, study guides — anything people find useful. Sell on Gumroad or Etsy. I created a simple budget spreadsheet and it earns me passive income every single month.</p>
+        <h2>5. Online Tutoring</h2>
+        <p>Are you good at maths, English, science, or any subject? Parents are desperate for good tutors. Platforms like Superprof connect you with students. You can also advertise on local Facebook groups. Charge R150 to R400 per hour depending on the subject.</p>
+        <h2>The Secret to Side Hustle Success</h2>
+        <p>Pick one. Just one. Do it for 90 days before you even think about starting another. The biggest mistake people make is starting five things at once and mastering none of them. Focus creates income. Distraction creates frustration.</p>
+        <section class="faq-section"><h2>Frequently Asked Questions</h2>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Do I need to register a business for a side hustle?</span><span class="faq-icon">+</span></div><div class="faq-a">Not immediately. You can start as a sole proprietor with just your ID number. Once you earn consistently above R80,000 per year you should consider registering a company for tax benefits.</div></div>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Do I pay tax on side hustle income?</span><span class="faq-icon">+</span></div><div class="faq-a">Yes. All income must be declared to SARS regardless of the source. Keep records of all your earnings and expenses. You can deduct business expenses to reduce your tax liability.</div></div>
+        </section>
+      </div></div>
+      <aside class="sidebar">
+        <div class="widget newsletter-widget"><div class="widget-header">💌 Newsletter</div><div class="widget-body"><div class="newsletter-icon">💌</div><h3>Money Notes</h3><p>Weekly tips, free.</p><input type="email" id="sidebar-email-s1" class="newsletter-input" placeholder="your@email.com"/><button id="sidebar-btn-s1" class="newsletter-btn" onclick="subscribeBrevo('sidebar-email-s1','sidebar-btn-s1')">Subscribe →</button></div></div>
+        <div class="widget" style="overflow:hidden;"><div class="widget-header">Advertisement</div><div class="ad-slot ad-sidebar" style="border:none;border-radius:0;"><span>AdSense 300×600</span></div></div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════════
+     ARTICLE: DEBT FREE
+═══════════════════════════════════════════════════ -->
+<main id="page-article-debt" class="page" role="main">
+  <div class="container article-wrap">
+    <button class="back-btn" onclick="navigate('blog')">← Back to Blog</button>
+    <div class="ad-slot ad-leaderboard" style="margin-bottom:28px;"><div class="ad-label">Advertisement</div><span>Google AdSense — Leaderboard 728×90</span></div>
+    <header class="article-header">
+      <nav class="breadcrumb"><a href="#" onclick="navigate('home');return false;">Home</a><span class="breadcrumb-sep">/</span><a href="#" onclick="navigate('blog');return false;">Blog</a><span class="breadcrumb-sep">/</span><span>Budgeting</span></nav>
+      <span class="post-tag">💳 Budgeting</span>
+      <h1 class="article-title">How I Paid Off R45,000 of Debt in 18 Months on an Average Salary</h1>
+      <div class="post-meta" style="margin-top:16px;font-size:13px;"><span>By <strong>Amora</strong></span><span class="meta-sep">·</span><span>March 4, 2025</span><span class="meta-sep">·</span><span class="read-time">9 min read</span></div>
+    </header>
+    <div class="article-hero-img">💪</div>
+    <div class="article-grid">
+      <div><div class="article-body">
+        <p>At 24 I had R45,000 in debt spread across a credit card, a clothing account, and a personal loan. It felt impossible. I was paying minimum payments every month and watching the balances barely move. Then I found the debt snowball method and everything changed.</p>
+        <h2>The Debt Snowball Method</h2>
+        <p>List all your debts from smallest to largest balance. Pay minimums on everything except the smallest debt. Throw every extra rand at that smallest debt. When it's gone, roll that payment onto the next smallest. The momentum builds like a snowball rolling downhill.</p>
+        <h2>My Actual Debt List</h2>
+        <ul>
+          <li>Edgars account — R3,200 (killed in month 2)</li>
+          <li>Credit card — R12,800 (killed in month 7)</li>
+          <li>Personal loan — R29,000 (killed in month 18)</li>
+        </ul>
+        <div class="ad-slot ad-in-content"><div class="ad-label">Advertisement</div><span>AdSense — In-Content</span></div>
+        <h2>What I Cut to Find Extra Money</h2>
+        <p>I did not go on a single holiday for 18 months. I cancelled subscriptions — DStv, gym, streaming services I barely used. I meal prepped every Sunday. I sold clothes I never wore. I took on two freelance projects on weekends. Every extra rand went to debt.</p>
+        <h2>What I Learned About Debt</h2>
+        <p>Debt is not just financial. It is emotional. The weight of owing money affects your confidence, your sleep, and your relationships. Becoming debt free was one of the most liberating things I have ever done. Not because of the money — but because of how free I felt.</p>
+        <h2>Should You Invest While Paying Off Debt?</h2>
+        <p>This depends on the interest rate of your debt. If your debt charges more than 10% interest per year — focus on debt first. If it is below 10% — consider doing both simultaneously. TFSA contributions while paying off low-interest debt is a solid strategy.</p>
+        <blockquote>"Debt freedom is not a destination. It is a decision you make every single day."</blockquote>
+        <section class="faq-section"><h2>Frequently Asked Questions</h2>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Snowball vs avalanche — which is better?</span><span class="faq-icon">+</span></div><div class="faq-a">Mathematically the avalanche method (highest interest first) saves more money. But psychologically the snowball method (smallest balance first) keeps more people motivated. Choose the one you will actually stick to.</div></div>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Should I close accounts after paying them off?</span><span class="faq-icon">+</span></div><div class="faq-a">For store accounts and credit cards you do not need — yes, close them. Having access to credit you do not need is a temptation. For your oldest credit card, keep it open as it positively affects your credit score.</div></div>
+        </section>
+      </div></div>
+      <aside class="sidebar">
+        <div class="widget newsletter-widget"><div class="widget-header">💌 Newsletter</div><div class="widget-body"><div class="newsletter-icon">💌</div><h3>Money Notes</h3><p>Weekly tips, free.</p><input type="email" id="sidebar-email-d1" class="newsletter-input" placeholder="your@email.com"/><button id="sidebar-btn-d1" class="newsletter-btn" onclick="subscribeBrevo('sidebar-email-d1','sidebar-btn-d1')">Subscribe →</button></div></div>
+        <div class="widget" style="overflow:hidden;"><div class="widget-header">Advertisement</div><div class="ad-slot ad-sidebar" style="border:none;border-radius:0;"><span>AdSense 300×600</span></div></div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════════
+     ARTICLE: EMERGENCY FUND
+═══════════════════════════════════════════════════ -->
+<main id="page-article-emergency" class="page" role="main">
+  <div class="container article-wrap">
+    <button class="back-btn" onclick="navigate('blog')">← Back to Blog</button>
+    <div class="ad-slot ad-leaderboard" style="margin-bottom:28px;"><div class="ad-label">Advertisement</div><span>Google AdSense — Leaderboard 728×90</span></div>
+    <header class="article-header">
+      <nav class="breadcrumb"><a href="#" onclick="navigate('home');return false;">Home</a><span class="breadcrumb-sep">/</span><a href="#" onclick="navigate('blog');return false;">Blog</a><span class="breadcrumb-sep">/</span><span>Budgeting</span></nav>
+      <span class="post-tag">💳 Budgeting</span>
+      <h1 class="article-title">Why Your Emergency Fund Is the Most Important Investment You Will Ever Make</h1>
+      <div class="post-meta" style="margin-top:16px;font-size:13px;"><span>By <strong>Amora</strong></span><span class="meta-sep">·</span><span>March 1, 2025</span><span class="meta-sep">·</span><span class="read-time">5 min read</span></div>
+    </header>
+    <div class="article-hero-img">🛡️</div>
+    <div class="article-grid">
+      <div><div class="article-body">
+        <p>Before you invest a single rand in the stock market, before you open an Easy Equities account, before you buy your first ETF — you need an emergency fund. I know that is not the exciting advice. But it is the most important thing I will ever tell you about money.</p>
+        <h2>What Is an Emergency Fund?</h2>
+        <p>An emergency fund is 3 to 6 months of your living expenses saved in a separate, accessible account. It is not for holidays. It is not for sales. It is for genuine emergencies: job loss, medical bills, car repairs, unexpected rent increases.</p>
+        <h2>Why Does It Matter for Investors?</h2>
+        <p>Without an emergency fund, the next unexpected expense forces you to sell your investments. You will sell at the worst possible time — when you are stressed, when markets might be down, when you have no choice. An emergency fund is what lets you stay invested through market downturns.</p>
+        <div class="ad-slot ad-in-content"><div class="ad-label">Advertisement</div><span>AdSense — In-Content</span></div>
+        <h2>Where to Keep Your Emergency Fund</h2>
+        <p>A high-yield savings account or money market account. In South Africa look at: FNB Easy Save, Capitec savings account, or African Bank's savings accounts which often offer the best rates. Do not invest it in the stock market — it needs to be accessible within 24 hours.</p>
+        <h2>How to Build It Fast</h2>
+        <ul>
+          <li>Set up an automatic transfer the day after payday</li>
+          <li>Start with R500 per month — increase as you can</li>
+          <li>Put any windfalls (tax refunds, bonuses) straight in</li>
+          <li>Treat it like a bill — non-negotiable</li>
+        </ul>
+        <h2>Once It Is Built</h2>
+        <p>Leave it alone. Only touch it for genuine emergencies. When you do use it, rebuilding it becomes your next financial priority before any other goals.</p>
+        <blockquote>"An emergency fund does not earn you money. It protects the money you are earning everywhere else."</blockquote>
+        <section class="faq-section"><h2>Frequently Asked Questions</h2>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>3 months or 6 months — how do I choose?</span><span class="faq-icon">+</span></div><div class="faq-a">If you have a stable job and no dependants, 3 months is fine. If you are self-employed, have dependants, or work in an unstable industry, aim for 6 months.</div></div>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Should I pay off debt or build an emergency fund first?</span><span class="faq-icon">+</span></div><div class="faq-a">Build a small emergency fund of R5,000 to R10,000 first, then focus on high-interest debt, then build the full emergency fund. This prevents you from going back into debt every time something unexpected happens.</div></div>
+        </section>
+      </div></div>
+      <aside class="sidebar">
+        <div class="widget newsletter-widget"><div class="widget-header">💌 Newsletter</div><div class="widget-body"><div class="newsletter-icon">💌</div><h3>Money Notes</h3><p>Weekly tips, free.</p><input type="email" id="sidebar-email-e1" class="newsletter-input" placeholder="your@email.com"/><button id="sidebar-btn-e1" class="newsletter-btn" onclick="subscribeBrevo('sidebar-email-e1','sidebar-btn-e1')">Subscribe →</button></div></div>
+        <div class="widget" style="overflow:hidden;"><div class="widget-header">Advertisement</div><div class="ad-slot ad-sidebar" style="border:none;border-radius:0;"><span>AdSense 300×600</span></div></div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════════
+     ARTICLE: CREDIT SCORE
+═══════════════════════════════════════════════════ -->
+<main id="page-article-credit" class="page" role="main">
+  <div class="container article-wrap">
+    <button class="back-btn" onclick="navigate('blog')">← Back to Blog</button>
+    <div class="ad-slot ad-leaderboard" style="margin-bottom:28px;"><div class="ad-label">Advertisement</div><span>Google AdSense — Leaderboard 728×90</span></div>
+    <header class="article-header">
+      <nav class="breadcrumb"><a href="#" onclick="navigate('home');return false;">Home</a><span class="breadcrumb-sep">/</span><a href="#" onclick="navigate('blog');return false;">Blog</a><span class="breadcrumb-sep">/</span><span>Budgeting</span></nav>
+      <span class="post-tag">💳 Budgeting</span>
+      <h1 class="article-title">Your Credit Score Explained: How to Check It, Fix It, and Use It to Build Wealth</h1>
+      <div class="post-meta" style="margin-top:16px;font-size:13px;"><span>By <strong>Amora</strong></span><span class="meta-sep">·</span><span>Feb 24, 2025</span><span class="meta-sep">·</span><span class="read-time">7 min read</span></div>
+    </header>
+    <div class="article-hero-img">📋</div>
+    <div class="article-grid">
+      <div><div class="article-body">
+        <p>Your credit score is a number between 300 and 850 that determines whether banks trust you with their money. A high score means access to home loans, car finance, and credit cards at low interest rates. A low score means rejection or paying significantly more in interest. Understanding yours is one of the most important financial moves you can make.</p>
+        <h2>How to Check Your Credit Score for Free</h2>
+        <p>In South Africa you are entitled to one free credit report per year from each credit bureau. The main bureaus are TransUnion, Experian, and Compuscan. You can also use apps like ClearScore or Nedbank Money app to check your score for free anytime.</p>
+        <h2>What Affects Your Credit Score?</h2>
+        <ul>
+          <li><strong>Payment history (35%)</strong> — paying on time is the biggest factor</li>
+          <li><strong>Credit utilisation (30%)</strong> — how much of your credit limit you use</li>
+          <li><strong>Length of credit history (15%)</strong> — older accounts help</li>
+          <li><strong>Credit mix (10%)</strong> — variety of credit types</li>
+          <li><strong>New credit inquiries (10%)</strong> — applying for too much credit hurts</li>
+        </ul>
+        <div class="ad-slot ad-in-content"><div class="ad-label">Advertisement</div><span>AdSense — In-Content</span></div>
+        <h2>How to Improve Your Score Fast</h2>
+        <p>Pay every account on time — even the minimum. Keep your credit card balance below 30% of the limit. Do not apply for multiple credit products at once. Do not close your oldest credit account. Dispute any errors on your credit report immediately.</p>
+        <h2>How a Good Credit Score Builds Wealth</h2>
+        <p>A score above 700 qualifies you for home loans at prime minus 1% or better. On a R1 million home loan over 20 years, a 1% better interest rate saves you over R200,000. Your credit score is literally worth hundreds of thousands of rands.</p>
+        <section class="faq-section"><h2>Frequently Asked Questions</h2>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>How long does it take to improve a bad credit score?</span><span class="faq-icon">+</span></div><div class="faq-a">With consistent on-time payments you can see meaningful improvement in 6 to 12 months. Serious negative information like defaults stay on your report for 5 years but their impact reduces over time.</div></div>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Does checking my own score hurt it?</span><span class="faq-icon">+</span></div><div class="faq-a">No. Checking your own score is a soft inquiry and does not affect your score at all. Only hard inquiries — when lenders check your score — can temporarily lower it.</div></div>
+        </section>
+      </div></div>
+      <aside class="sidebar">
+        <div class="widget newsletter-widget"><div class="widget-header">💌 Newsletter</div><div class="widget-body"><div class="newsletter-icon">💌</div><h3>Money Notes</h3><p>Weekly tips, free.</p><input type="email" id="sidebar-email-cr1" class="newsletter-input" placeholder="your@email.com"/><button id="sidebar-btn-cr1" class="newsletter-btn" onclick="subscribeBrevo('sidebar-email-cr1','sidebar-btn-cr1')">Subscribe →</button></div></div>
+        <div class="widget" style="overflow:hidden;"><div class="widget-header">Advertisement</div><div class="ad-slot ad-sidebar" style="border:none;border-radius:0;"><span>AdSense 300×600</span></div></div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════════
+     ARTICLE: SARS TAX
+═══════════════════════════════════════════════════ -->
+<main id="page-article-sars" class="page" role="main">
+  <div class="container article-wrap">
+    <button class="back-btn" onclick="navigate('blog')">← Back to Blog</button>
+    <div class="ad-slot ad-leaderboard" style="margin-bottom:28px;"><div class="ad-label">Advertisement</div><span>Google AdSense — Leaderboard 728×90</span></div>
+    <header class="article-header">
+      <nav class="breadcrumb"><a href="#" onclick="navigate('home');return false;">Home</a><span class="breadcrumb-sep">/</span><a href="#" onclick="navigate('blog');return false;">Blog</a><span class="breadcrumb-sep">/</span><span>Tax & SARS</span></nav>
+      <span class="post-tag">🧾 Tax & SARS</span>
+      <h1 class="article-title">SARS Tax Season 2025: A Simple Guide for South African Investors</h1>
+      <div class="post-meta" style="margin-top:16px;font-size:13px;"><span>By <strong>Amora</strong></span><span class="meta-sep">·</span><span>Feb 20, 2025</span><span class="meta-sep">·</span><span class="read-time">9 min read</span></div>
+    </header>
+    <div class="article-hero-img">🧾</div>
+    <div class="article-grid">
+      <div><div class="article-body">
+        <p>Tax season stresses most people out because nobody explained it to them simply. I was terrified of SARS until I actually understood how it works. Now I see tax season as an opportunity — a chance to claim back what I am owed and plan smarter for the year ahead.</p>
+        <h2>Do You Need to Submit a Tax Return?</h2>
+        <p>You must submit if: you earned more than R500,000 from one employer, you had more than one income source, you earned rental income, you have investment income, you are self-employed, or SARS sends you a letter saying you must. When in doubt — submit. The penalty for not submitting is worse than any tax you might owe.</p>
+        <h2>What Investors Need to Declare</h2>
+        <ul>
+          <li><strong>Dividends</strong> — Easy Equities sends you a tax certificate (IT3b) every year</li>
+          <li><strong>Capital gains</strong> — profit from selling shares or ETFs</li>
+          <li><strong>Crypto gains</strong> — treated as income by SARS</li>
+          <li><strong>Interest</strong> — from savings accounts above R23,800 per year</li>
+        </ul>
+        <div class="ad-slot ad-in-content"><div class="ad-label">Advertisement</div><span>AdSense — In-Content</span></div>
+        <h2>TFSA and Tax</h2>
+        <p>Good news: your TFSA investments do not need to be declared on your tax return. That is literally the whole point. No dividends tax, no capital gains tax, no paperwork. One less thing to stress about.</p>
+        <h2>How to Submit on SARS eFiling</h2>
+        <p>Go to efiling.sars.gov.za. Register if you haven't already. Wait for your IRP5 from your employer (usually available by June). Add your investment income from your IT3b certificates. Submit your return. SARS will tell you if you owe money or get a refund.</p>
+        <h2>Smart Tax Tips for Investors</h2>
+        <p>Maximise your TFSA before investing outside it. Use your R40,000 annual capital gains exclusion — you only pay CGT on gains above this amount. Keep records of every investment transaction. Consider a tax practitioner if your situation is complex.</p>
+        <section class="faq-section"><h2>Frequently Asked Questions</h2>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>When is the SARS tax deadline?</span><span class="faq-icon">+</span></div><div class="faq-a">For individual non-provisional taxpayers, the eFiling deadline is usually in October each year. Provisional taxpayers have different deadlines. Check sars.gov.za for the current year's exact dates.</div></div>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>What happens if I don't declare investment income?</span><span class="faq-icon">+</span></div><div class="faq-a">SARS receives third-party data from banks and investment platforms. They will know. Non-disclosure can result in penalties, interest, and in serious cases, criminal prosecution. Always declare everything.</div></div>
+        </section>
+      </div></div>
+      <aside class="sidebar">
+        <div class="widget newsletter-widget"><div class="widget-header">💌 Newsletter</div><div class="widget-body"><div class="newsletter-icon">💌</div><h3>Money Notes</h3><p>Weekly tips, free.</p><input type="email" id="sidebar-email-sr1" class="newsletter-input" placeholder="your@email.com"/><button id="sidebar-btn-sr1" class="newsletter-btn" onclick="subscribeBrevo('sidebar-email-sr1','sidebar-btn-sr1')">Subscribe →</button></div></div>
+        <div class="widget" style="overflow:hidden;"><div class="widget-header">Advertisement</div><div class="ad-slot ad-sidebar" style="border:none;border-radius:0;"><span>AdSense 300×600</span></div></div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════════
+     ARTICLE: RETIREMENT
+═══════════════════════════════════════════════════ -->
+<main id="page-article-retirement" class="page" role="main">
+  <div class="container article-wrap">
+    <button class="back-btn" onclick="navigate('blog')">← Back to Blog</button>
+    <div class="ad-slot ad-leaderboard" style="margin-bottom:28px;"><div class="ad-label">Advertisement</div><span>Google AdSense — Leaderboard 728×90</span></div>
+    <header class="article-header">
+      <nav class="breadcrumb"><a href="#" onclick="navigate('home');return false;">Home</a><span class="breadcrumb-sep">/</span><a href="#" onclick="navigate('blog');return false;">Blog</a><span class="breadcrumb-sep">/</span><span>Investing</span></nav>
+      <span class="post-tag">📈 Investing</span>
+      <h1 class="article-title">Retirement in Your 20s and 30s: Why Starting Now Changes Everything</h1>
+      <div class="post-meta" style="margin-top:16px;font-size:13px;"><span>By <strong>Amora</strong></span><span class="meta-sep">·</span><span>Feb 17, 2025</span><span class="meta-sep">·</span><span class="read-time">8 min read</span></div>
+    </header>
+    <div class="article-hero-img">🌅</div>
+    <div class="article-grid">
+      <div><div class="article-body">
+        <p>Retirement feels impossibly far away when you are in your twenties. I get it. I used to think I had decades to worry about it. Then I discovered compound interest and I opened my retirement account the very same week. Here is why starting now is the single most powerful financial decision you can make.</p>
+        <h2>The Power of Compound Interest</h2>
+        <p>If you invest R1,000 per month from age 25 at 10% annual return, you will have approximately R6.4 million by age 65. If you wait until 35 to start the same investment, you will have approximately R2.3 million. Same monthly amount. Ten years difference. R4.1 million less. That is the cost of waiting.</p>
+        <h2>Retirement Vehicles Available in South Africa</h2>
+        <ul>
+          <li><strong>Retirement Annuity (RA)</strong> — tax deductible contributions, locked until age 55</li>
+          <li><strong>Pension Fund</strong> — through your employer, contributions are tax deductible</li>
+          <li><strong>Provident Fund</strong> — similar to pension, different withdrawal rules</li>
+          <li><strong>TFSA</strong> — not technically retirement but perfect for tax-free long-term growth</li>
+        </ul>
+        <div class="ad-slot ad-in-content"><div class="ad-label">Advertisement</div><span>AdSense — In-Content</span></div>
+        <h2>How Much Should You Save for Retirement?</h2>
+        <p>The general rule is 15% of your gross income. If you start late, you need to save more. If your employer contributes to a pension or provident fund, that counts toward your 15%. Check your payslip to see if you are already saving for retirement without realising it.</p>
+        <h2>The TFSA as a Retirement Tool</h2>
+        <p>Unlike a Retirement Annuity, a TFSA has no lock-in period. You can access the money any time. This flexibility makes it perfect for people in their 20s who want to build long-term wealth without committing to a product they cannot touch until 55. I use both — RA for the tax deduction, TFSA for flexibility.</p>
+        <blockquote>"Compound interest is the eighth wonder of the world. She who understands it earns it. She who doesn't pays it."</blockquote>
+        <section class="faq-section"><h2>Frequently Asked Questions</h2>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Can I retire early in South Africa?</span><span class="faq-icon">+</span></div><div class="faq-a">Yes. Early retirement is possible if you have saved enough to live off investment returns. The FIRE movement (Financial Independence, Retire Early) is growing in SA. The key number is 25 times your annual expenses saved and invested.</div></div>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>What if I cannot afford 15% right now?</span><span class="faq-icon">+</span></div><div class="faq-a">Start with whatever you can — even 1% or 2%. Increase by 1% every time you get a salary increase. The habit matters more than the amount when you are starting out.</div></div>
+        </section>
+      </div></div>
+      <aside class="sidebar">
+        <div class="widget newsletter-widget"><div class="widget-header">💌 Newsletter</div><div class="widget-body"><div class="newsletter-icon">💌</div><h3>Money Notes</h3><p>Weekly tips, free.</p><input type="email" id="sidebar-email-r1" class="newsletter-input" placeholder="your@email.com"/><button id="sidebar-btn-r1" class="newsletter-btn" onclick="subscribeBrevo('sidebar-email-r1','sidebar-btn-r1')">Subscribe →</button></div></div>
+        <div class="widget" style="overflow:hidden;"><div class="widget-header">Advertisement</div><div class="ad-slot ad-sidebar" style="border:none;border-radius:0;"><span>AdSense 300×600</span></div></div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════════
+     ARTICLE: FIRST SALARY
+═══════════════════════════════════════════════════ -->
+<main id="page-article-firstsalary" class="page" role="main">
+  <div class="container article-wrap">
+    <button class="back-btn" onclick="navigate('blog')">← Back to Blog</button>
+    <div class="ad-slot ad-leaderboard" style="margin-bottom:28px;"><div class="ad-label">Advertisement</div><span>Google AdSense — Leaderboard 728×90</span></div>
+    <header class="article-header">
+      <nav class="breadcrumb"><a href="#" onclick="navigate('home');return false;">Home</a><span class="breadcrumb-sep">/</span><a href="#" onclick="navigate('blog');return false;">Blog</a><span class="breadcrumb-sep">/</span><span>Budgeting</span></nav>
+      <span class="post-tag">💳 Budgeting</span>
+      <h1 class="article-title">What to Do With Your First Salary: The 5-Step Money Plan for Graduates</h1>
+      <div class="post-meta" style="margin-top:16px;font-size:13px;"><span>By <strong>Amora</strong></span><span class="meta-sep">·</span><span>Feb 14, 2025</span><span class="meta-sep">·</span><span class="read-time">6 min read</span></div>
+    </header>
+    <div class="article-hero-img">🎓</div>
+    <div class="article-grid">
+      <div><div class="article-body">
+        <p>You just received your first real salary. The temptation to spend all of it is absolutely real — I know because I did exactly that with mine. New clothes, going out, treating friends. By day 15 I was broke. Do not make my mistakes. Here is the plan I wish I had followed.</p>
+        <h2>Step 1 — Do Not Lifestyle Inflate</h2>
+        <p>The biggest financial mistake graduates make is immediately spending more because they earn more. You survived on student money before. Live like a student for one more year while you build your financial foundation. The discipline you build now determines your wealth in your 30s.</p>
+        <h2>Step 2 — Build Your Emergency Fund First</h2>
+        <p>Before anything else, save R10,000 as a starter emergency fund. This takes about 2 to 3 months on a graduate salary if you are intentional. Once you have this buffer you can invest without fear of having to sell when life happens.</p>
+        <div class="ad-slot ad-in-content"><div class="ad-label">Advertisement</div><span>AdSense — In-Content</span></div>
+        <h2>Step 3 — Open a TFSA on Easy Equities</h2>
+        <p>Immediately start putting R500 to R1,000 per month into a TFSA. Buy a simple ETF like the Satrix MSCI World. Set up a debit order so it happens automatically on payday. Never miss a month.</p>
+        <h2>Step 4 — Pay Off Student Debt Aggressively</h2>
+        <p>If you have student loans, throw everything you can at them. The interest accumulates daily. Every extra payment saves you money in the long run. Target being debt free within 2 to 3 years of your first job.</p>
+        <h2>Step 5 — Invest in Yourself</h2>
+        <p>Allocate a small budget every month for books, online courses, and skills development. Your earning potential is your greatest asset in your 20s. Every skill you build increases that potential. The return on investing in yourself often beats the stock market.</p>
+        <blockquote>"Your first salary is not a reward. It is a launchpad. Use it wisely."</blockquote>
+        <section class="faq-section"><h2>Frequently Asked Questions</h2>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>How much should I save from my first salary?</span><span class="faq-icon">+</span></div><div class="faq-a">Aim to save at least 20% of your take-home salary. If that feels impossible, start with 10% and increase by 1% every 3 months until you reach 20%.</div></div>
+          <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Should I tell my family about my salary?</span><span class="faq-icon">+</span></div><div class="faq-a">Be cautious. In many South African families there is pressure to financially support extended family. Decide in advance what you can genuinely afford to contribute without compromising your own financial foundation.</div></div>
+        </section>
+      </div></div>
+      <aside class="sidebar">
+        <div class="widget newsletter-widget"><div class="widget-header">💌 Newsletter</div><div class="widget-body"><div class="newsletter-icon">💌</div><h3>Money Notes</h3><p>Weekly tips, free.</p><input type="email" id="sidebar-email-fs1" class="newsletter-input" placeholder="your@email.com"/><button id="sidebar-btn-fs1" class="newsletter-btn" onclick="subscribeBrevo('sidebar-email-fs1','sidebar-btn-fs1')">Subscribe →</button></div></div>
+        <div class="widget" style="overflow:hidden;"><div class="widget-header">Advertisement</div><div class="ad-slot ad-sidebar" style="border:none;border-radius:0;"><span>AdSense 300×600</span></div></div>
+      </aside>
+    </div>
+  </div>
+</main>
 
 </body>
 </html>
