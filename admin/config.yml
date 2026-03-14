@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "select", options: ["Investing", "Easy Equities", "Make Money Online", "Budgeting", "Crypto", "Real Estate", "Tax & SARS"]}
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
+      - {label: "Read Time", name: "readtime", widget: "string", default: "5 min"}
+      - {label: "Body", name: "body", widget: "markdown"}
