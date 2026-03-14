@@ -1,0 +1,2132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="I'm Just a Girl in Finance — smart money tips, investing guides, Easy Equities tutorials, and how to make money online. Written by women, for women." />
+  <meta name="keywords" content="girl finance, investing for women, easy equities, make money online, where to invest, rose gold finance blog" />
+  <meta name="author" content="Just a Girl in Finance" />
+  <meta property="og:title" content="Just a Girl in Finance — Smart Money for Modern Women" />
+  <meta property="og:description" content="Demystifying investing, wealth-building, and making money online — with a little glam." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <title>Just a Girl in Finance 💸 | Smart Money for Modern Women</title>
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ═══════════════════════════════════════
+       DESIGN TOKENS — Rose Gold Editorial
+    ═══════════════════════════════════════ */
+    :root {
+      --cream:      #fdf8f5;
+      --cream2:     #faf3ee;
+      --blush:      #f9e8e0;
+      --rose:       #e8b4a0;
+      --rose-dark:  #c8876d;
+      --rosegold:   #b87c6a;
+      --deep:       #8b4f3f;
+      --mauve:      #c9a0a0;
+      --nude:       #e8d5cd;
+      --text:       #2c1f1a;
+      --text-light: #7a5a52;
+      --text-muted: #b09090;
+      --white:      #ffffff;
+      --border:     #edddd6;
+      --shadow:     rgba(180, 100, 80, 0.12);
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'Jost', sans-serif;
+      --radius:     12px;
+      --radius-sm:  8px;
+      --max-w:      1200px;
+      --transition: 0.25s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; transition: color var(--transition); }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { list-style: none; }
+
+    /* ═══════════════════════════════════════
+       LAYOUT
+    ═══════════════════════════════════════ */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ═══════════════════════════════════════
+       AD SLOTS
+    ═══════════════════════════════════════ */
+    .ad-slot {
+      background: linear-gradient(135deg, #fdf0eb 0%, #f9e8e0 100%);
+      border: 1.5px dashed var(--rose);
+      border-radius: var(--radius-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: center;
+      gap: 4px;
+    }
+    .ad-slot .ad-icon { font-size: 20px; opacity: 0.5; }
+    .ad-leaderboard  { width: 100%; height: 90px; }
+    .ad-rectangle    { width: 100%; height: 250px; }
+    .ad-half-page    { width: 100%; height: 600px; }
+    .ad-in-content   { width: 100%; height: 250px; margin: 36px 0; }
+    .ad-footer       { width: 100%; height: 90px; }
+    .ad-mobile       { width: 100%; height: 100px; display: none; }
+    @media(max-width:600px) {
+      .ad-leaderboard { display: none; }
+      .ad-mobile      { display: flex; }
+      .ad-half-page   { height: 300px; }
+    }
+
+    /* ═══════════════════════════════════════
+       TOP ANNOUNCEMENT BAR
+    ═══════════════════════════════════════ */
+    .announcement-bar {
+      background: linear-gradient(90deg, var(--rosegold), var(--deep), var(--rosegold));
+      background-size: 200% 100%;
+      animation: shimmer 6s ease infinite;
+      color: var(--white);
+      text-align: center;
+      padding: 9px 24px;
+      font-size: 12.5px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+    }
+    @keyframes shimmer { 0%,100% { background-position:0% 50%; } 50% { background-position:100% 50%; } }
+    .announcement-bar a { color: var(--white); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+    /* ═══════════════════════════════════════
+       HEADER
+    ═══════════════════════════════════════ */
+    header {
+      background: rgba(253,248,245,0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 20px;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .logo-top {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .logo-sub {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rosegold);
+    }
+    .logo-accent { color: var(--rosegold); }
+
+    nav { display: flex; align-items: center; gap: 4px; }
+    nav a {
+      padding: 8px 15px;
+      border-radius: 99px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-light);
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    nav a:hover, nav a.active {
+      background: var(--blush);
+      color: var(--rosegold);
+    }
+    .nav-cta {
+      background: var(--rosegold) !important;
+      color: var(--white) !important;
+      padding: 9px 20px !important;
+    }
+    .nav-cta:hover { background: var(--deep) !important; transform: translateY(-1px); box-shadow: 0 4px 16px var(--shadow); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all var(--transition);
+    }
+
+    @media(max-width:820px) {
+      nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--border); flex-direction: column; padding: 16px 24px; gap: 4px; box-shadow: 0 8px 32px var(--shadow); }
+      nav.open { display: flex; }
+      nav a { width: 100%; border-radius: var(--radius-sm); }
+      .hamburger { display: flex; }
+    }
+
+    /* ═══════════════════════════════════════
+       TOP AD BANNER
+    ═══════════════════════════════════════ */
+    .top-ad-wrap { padding: 12px 0; background: var(--cream2); border-bottom: 1px solid var(--border); }
+
+    /* ═══════════════════════════════════════
+       HERO — HOMEPAGE
+    ═══════════════════════════════════════ */
+    .hero {
+      padding: 64px 0 56px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--cream2) 0%, var(--cream) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(232,180,160,0.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--blush);
+      border: 1px solid var(--rose);
+      border-radius: 99px;
+      padding: 6px 18px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--rosegold);
+      margin-bottom: 24px;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(42px, 7vw, 80px);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      max-width: 780px;
+      margin: 0 auto 20px;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--rosegold);
+      font-weight: 600;
+    }
+    .hero-sub {
+      font-size: 17px;
+      color: var(--text-light);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      font-weight: 400;
+      line-height: 1.7;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      animation: fadeUp 0.7s 0.3s ease both;
+    }
+    .btn-primary {
+      background: var(--rosegold);
+      color: var(--white);
+      padding: 13px 28px;
+      border-radius: 99px;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      transition: all var(--transition);
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-body);
+    }
+    .btn-primary:hover { background: var(--deep); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(176,100,80,0.3); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      padding: 12px 28px;
+      border-radius: 99px;
+      font-weight: 500;
+      font-size: 14px;
+      border: 1.5px solid var(--border);
+      cursor: pointer;
+      font-family: var(--font-body);
+      transition: all var(--transition);
+    }
+    .btn-outline:hover { border-color: var(--rosegold); color: var(--rosegold); }
+
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 48px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      animation: fadeUp 0.7s 0.4s ease both;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--rosegold);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-label { font-size: 12px; color: var(--text-muted); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+
+    @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+
+    /* ═══════════════════════════════════════
+       CATEGORY PILLS
+    ═══════════════════════════════════════ */
+    .categories-bar { padding: 24px 0; border-bottom: 1px solid var(--border); overflow-x: auto; }
+    .categories-inner { display: flex; gap: 8px; min-width: max-content; }
+    .cat-pill {
+      padding: 7px 18px;
+      border-radius: 99px;
+      border: 1.5px solid var(--border);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-light);
+      cursor: pointer;
+      transition: all var(--transition);
+      white-space: nowrap;
+      background: var(--white);
+    }
+    .cat-pill:hover, .cat-pill.active {
+      background: var(--blush);
+      border-color: var(--rose);
+      color: var(--deep);
+    }
+
+    /* ═══════════════════════════════════════
+       MAIN GRID LAYOUT
+    ═══════════════════════════════════════ */
+    .main-wrap { padding: 48px 0; }
+    .content-sidebar {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 48px;
+      align-items: start;
+    }
+    @media(max-width:960px) {
+      .content-sidebar { grid-template-columns: 1fr; }
+      .sidebar { order: 2; }
+    }
+
+    /* ═══════════════════════════════════════
+       SECTION HEADERS
+    ═══════════════════════════════════════ */
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title::before {
+      content: '';
+      display: block;
+      width: 3px; height: 26px;
+      background: linear-gradient(180deg, var(--rosegold), var(--rose));
+      border-radius: 2px;
+    }
+    .section-link {
+      font-size: 13px;
+      color: var(--rosegold);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .section-link:hover { color: var(--deep); }
+
+    /* ═══════════════════════════════════════
+       FEATURED POST — BIG CARD
+    ═══════════════════════════════════════ */
+    .featured-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 32px;
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .featured-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px var(--shadow); }
+    @media(max-width:680px) { .featured-card { grid-template-columns: 1fr; } }
+
+    .featured-img {
+      background: linear-gradient(135deg, #f9e0d8 0%, #f0c8bc 40%, #e8b4a0 100%);
+      min-height: 280px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .featured-img .post-emoji { font-size: 72px; opacity: 0.6; }
+    .featured-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 60%, rgba(200,135,109,0.15));
+    }
+    .featured-body { padding: 36px; display: flex; flex-direction: column; justify-content: center; }
+    .post-tag {
+      display: inline-block;
+      background: var(--blush);
+      color: var(--rosegold);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-bottom: 14px;
+      border: 1px solid var(--rose);
+    }
+    .featured-body h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    .featured-body h2:hover { color: var(--rosegold); transition: color var(--transition); }
+    .post-excerpt {
+      font-size: 14.5px;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+    .meta-sep { opacity: 0.4; }
+    .read-time { color: var(--rosegold); font-weight: 600; }
+
+    /* ═══════════════════════════════════════
+       POST GRID
+    ═══════════════════════════════════════ */
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    @media(max-width:600px) { .posts-grid { grid-template-columns: 1fr; } }
+
+    .post-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .post-card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px var(--shadow); }
+    .card-img {
+      height: 180px;
+      background: linear-gradient(135deg, #fce8e0, #f0c8bc);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .card-img .emoji { font-size: 48px; opacity: 0.55; }
+    .card-img-2 { background: linear-gradient(135deg, #fde8f0, #f5c4d8); }
+    .card-img-3 { background: linear-gradient(135deg, #f8e8f8, #e8c4e8); }
+    .card-img-4 { background: linear-gradient(135deg, #fef0e0, #f5d8b8); }
+    .card-img-5 { background: linear-gradient(135deg, #e8f8f0, #b8e8d0); }
+    .card-img-6 { background: linear-gradient(135deg, #e8eef8, #b8c8e8); }
+
+    .card-body { padding: 20px; }
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .post-card:hover .card-title { color: var(--rosegold); transition: color var(--transition); }
+    .card-excerpt {
+      font-size: 13.5px;
+      color: var(--text-light);
+      line-height: 1.65;
+      margin-bottom: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* ═══════════════════════════════════════
+       LIST POSTS (recent articles style)
+    ═══════════════════════════════════════ */
+    .post-list { display: flex; flex-direction: column; gap: 0; }
+    .post-list-item {
+      display: flex;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: background var(--transition);
+    }
+    .post-list-item:last-child { border-bottom: none; }
+    .post-list-item:hover { background: var(--cream2); margin: 0 -12px; padding: 18px 12px; border-radius: var(--radius-sm); }
+    .list-img {
+      width: 80px; height: 80px;
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px;
+    }
+    .list-body { flex: 1; }
+    .list-title { font-family: var(--font-display); font-size: 15px; font-weight: 600; line-height: 1.3; margin-bottom: 6px; }
+    .post-list-item:hover .list-title { color: var(--rosegold); }
+    .list-meta { font-size: 11.5px; color: var(--text-muted); }
+
+    /* ═══════════════════════════════════════
+       SIDEBAR
+    ═══════════════════════════════════════ */
+    .sidebar { display: flex; flex-direction: column; gap: 28px; position: sticky; top: 90px; }
+
+    .widget {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .widget-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: var(--cream2);
+    }
+    .widget-body { padding: 20px; }
+
+    /* Newsletter widget */
+    .newsletter-widget {
+      background: linear-gradient(135deg, var(--blush) 0%, #fce0d8 100%);
+      border: 1px solid var(--rose);
+    }
+    .newsletter-widget .widget-header {
+      background: transparent;
+      border-color: rgba(232,180,160,0.4);
+      color: var(--rosegold);
+    }
+    .newsletter-icon { font-size: 32px; margin-bottom: 10px; }
+    .newsletter-widget h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .newsletter-widget p { font-size: 13px; color: var(--text-light); margin-bottom: 16px; line-height: 1.6; }
+    .newsletter-input {
+      width: 100%;
+      padding: 11px 16px;
+      border: 1.5px solid var(--rose);
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.8);
+      font-family: var(--font-body);
+      font-size: 13.5px;
+      color: var(--text);
+      margin-bottom: 10px;
+      outline: none;
+      transition: border-color var(--transition);
+    }
+    .newsletter-input:focus { border-color: var(--rosegold); background: var(--white); }
+    .newsletter-input::placeholder { color: var(--text-muted); }
+    .newsletter-btn {
+      width: 100%;
+      padding: 11px;
+      background: var(--rosegold);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 13.5px;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .newsletter-btn:hover { background: var(--deep); }
+
+    /* Categories widget */
+    .cat-list { display: flex; flex-direction: column; }
+    .cat-list-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 13.5px;
+      cursor: pointer;
+      color: var(--text-light);
+      transition: color var(--transition);
+    }
+    .cat-list-item:last-child { border-bottom: none; }
+    .cat-list-item:hover { color: var(--rosegold); }
+    .cat-count {
+      background: var(--blush);
+      color: var(--rosegold);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 99px;
+    }
+
+    /* Recent posts widget */
+    .recent-post {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+    }
+    .recent-post:last-child { border-bottom: none; padding-bottom: 0; }
+    .recent-post:hover .recent-title { color: var(--rosegold); }
+    .recent-thumb {
+      width: 60px; height: 60px;
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+    .recent-title { font-size: 13px; font-weight: 600; line-height: 1.4; margin-bottom: 4px; transition: color var(--transition); }
+    .recent-date { font-size: 11px; color: var(--text-muted); }
+
+    /* ═══════════════════════════════════════
+       NEWSLETTER SECTION (full-width)
+    ═══════════════════════════════════════ */
+    .newsletter-section {
+      background: linear-gradient(135deg, var(--blush) 0%, #fce8e0 50%, var(--nude) 100%);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 72px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .newsletter-section::before {
+      content: '💌';
+      position: absolute;
+      font-size: 200px;
+      opacity: 0.04;
+      top: -20px; right: -20px;
+    }
+    .newsletter-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(30px, 5vw, 48px);
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .newsletter-section h2 em { color: var(--rosegold); font-style: italic; }
+    .newsletter-section p { font-size: 15px; color: var(--text-light); max-width: 480px; margin: 0 auto 32px; }
+    .newsletter-form {
+      display: flex;
+      gap: 12px;
+      max-width: 440px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    .newsletter-form input {
+      flex: 1;
+      min-width: 220px;
+      padding: 13px 20px;
+      border: 1.5px solid var(--rose);
+      border-radius: 99px;
+      background: var(--white);
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--text);
+      outline: none;
+      transition: border-color var(--transition);
+    }
+    .newsletter-form input:focus { border-color: var(--rosegold); }
+    .newsletter-form button {
+      padding: 13px 28px;
+      background: var(--rosegold);
+      color: var(--white);
+      border: none;
+      border-radius: 99px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .newsletter-form button:hover { background: var(--deep); transform: translateY(-1px); }
+
+    /* ═══════════════════════════════════════
+       ARTICLE PAGE
+    ═══════════════════════════════════════ */
+    .article-wrap { padding: 40px 0 64px; }
+    .article-header { max-width: 820px; margin: 0 auto 36px; }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .breadcrumb a:hover { color: var(--rosegold); }
+    .breadcrumb-sep { opacity: 0.4; }
+
+    .article-title {
+      font-family: var(--font-display);
+      font-size: clamp(30px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    .article-hero-img {
+      max-width: 820px;
+      margin: 0 auto 36px;
+      height: 380px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #fce8e0 0%, #f0c8bc 40%, #e8b4a0 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 100px;
+      overflow: hidden;
+      position: relative;
+    }
+    .article-hero-img::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(253,248,245,0.3));
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 48px;
+      align-items: start;
+    }
+    @media(max-width:960px) { .article-grid { grid-template-columns: 1fr; } }
+
+    .article-body {
+      font-size: 17px;
+      line-height: 1.85;
+      color: #3d2820;
+    }
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      margin: 44px 0 16px;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .article-body h3 {
+      font-family: var(--font-display);
+      font-size: 21px;
+      font-weight: 600;
+      margin: 32px 0 12px;
+      color: var(--text);
+    }
+    .article-body p { margin-bottom: 22px; }
+    .article-body strong { color: var(--text); font-weight: 600; }
+    .article-body a { color: var(--rosegold); border-bottom: 1px solid var(--rose); }
+    .article-body a:hover { color: var(--deep); border-color: var(--deep); }
+    .article-body ul { padding-left: 20px; margin-bottom: 22px; list-style: none; }
+    .article-body ul li { padding: 6px 0 6px 24px; position: relative; }
+    .article-body ul li::before {
+      content: '✦';
+      position: absolute; left: 0;
+      color: var(--rosegold);
+      font-size: 12px;
+      top: 10px;
+    }
+    .article-body ol { padding-left: 28px; margin-bottom: 22px; }
+    .article-body ol li { padding: 5px 0; }
+
+    .article-body blockquote {
+      border-left: 3px solid var(--rosegold);
+      background: var(--blush);
+      padding: 20px 24px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 32px 0;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 20px;
+      color: var(--rosegold);
+      line-height: 1.5;
+    }
+
+    /* Callout box */
+    .callout {
+      background: linear-gradient(135deg, var(--blush), #fce0d8);
+      border: 1px solid var(--rose);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 32px 0;
+    }
+    .callout-title { font-weight: 700; font-size: 14px; color: var(--rosegold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .callout p { font-size: 14.5px; color: var(--text-light); margin: 0; }
+
+    /* FAQ section */
+    .faq-section { margin-top: 48px; }
+    .faq-section h2 {
+      font-family: var(--font-display);
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: var(--white);
+    }
+    .faq-q {
+      padding: 18px 20px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      transition: background var(--transition);
+    }
+    .faq-q:hover { background: var(--cream2); }
+    .faq-q.open { color: var(--rosegold); background: var(--blush); }
+    .faq-icon { font-size: 20px; flex-shrink: 0; transition: transform var(--transition); color: var(--rosegold); }
+    .faq-q.open .faq-icon { transform: rotate(45deg); }
+    .faq-a {
+      display: none;
+      padding: 0 20px 18px;
+      font-size: 14.5px;
+      color: var(--text-light);
+      line-height: 1.7;
+      border-top: 1px solid var(--border);
+    }
+    .faq-a.open { display: block; }
+
+    /* ═══════════════════════════════════════
+       ABOUT PAGE
+    ═══════════════════════════════════════ */
+    .about-hero {
+      padding: 72px 0;
+      background: linear-gradient(135deg, var(--cream2) 0%, var(--blush) 100%);
+      text-align: center;
+    }
+    .about-avatar {
+      width: 120px; height: 120px;
+      background: linear-gradient(135deg, var(--rose), var(--rosegold));
+      border-radius: 50%;
+      margin: 0 auto 24px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 56px;
+      box-shadow: 0 8px 32px rgba(176,100,80,0.25);
+    }
+    .about-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(32px,5vw,52px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .about-hero h1 em { color: var(--rosegold); font-style: italic; }
+    .about-hero p { font-size: 16px; color: var(--text-light); max-width: 540px; margin: 0 auto; line-height: 1.7; }
+    .about-content { max-width: 720px; margin: 56px auto; padding: 0 24px; }
+    .about-content h2 { font-family: var(--font-display); font-size: 28px; font-weight: 700; margin-bottom: 16px; }
+    .about-content p { font-size: 16px; color: var(--text-light); line-height: 1.8; margin-bottom: 20px; }
+
+    /* ═══════════════════════════════════════
+       CONTACT PAGE
+    ═══════════════════════════════════════ */
+    .contact-wrap { max-width: 640px; margin: 64px auto; padding: 0 24px; text-align: center; }
+    .contact-wrap h1 { font-family: var(--font-display); font-size: 42px; font-weight: 700; margin-bottom: 12px; }
+    .contact-wrap h1 em { color: var(--rosegold); font-style: italic; }
+    .contact-wrap > p { font-size: 15px; color: var(--text-light); margin-bottom: 40px; }
+    .contact-form { text-align: left; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-light); margin-bottom: 8px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--white);
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--text);
+      outline: none;
+      transition: border-color var(--transition);
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--rosegold); }
+    .form-group textarea { resize: vertical; min-height: 140px; }
+    .form-submit { width: 100%; padding: 14px; background: var(--rosegold); color: var(--white); border: none; border-radius: var(--radius-sm); font-family: var(--font-body); font-weight: 600; font-size: 15px; cursor: pointer; transition: all var(--transition); }
+    .form-submit:hover { background: var(--deep); transform: translateY(-1px); }
+
+    /* ═══════════════════════════════════════
+       PRIVACY POLICY PAGE
+    ═══════════════════════════════════════ */
+    .policy-wrap { max-width: 760px; margin: 64px auto; padding: 0 24px 64px; }
+    .policy-wrap h1 { font-family: var(--font-display); font-size: 42px; font-weight: 700; margin-bottom: 8px; }
+    .policy-wrap .last-updated { font-size: 13px; color: var(--text-muted); margin-bottom: 40px; }
+    .policy-wrap h2 { font-family: var(--font-display); font-size: 24px; font-weight: 700; margin: 36px 0 12px; color: var(--text); }
+    .policy-wrap p, .policy-wrap li { font-size: 15px; color: var(--text-light); line-height: 1.8; margin-bottom: 14px; }
+    .policy-wrap ul { padding-left: 20px; }
+    .policy-wrap ul li { list-style: disc; }
+
+    /* ═══════════════════════════════════════
+       BLOG PAGE
+    ═══════════════════════════════════════ */
+    .blog-hero {
+      padding: 56px 0 40px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .blog-hero h1 { font-family: var(--font-display); font-size: clamp(36px,5vw,56px); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .blog-hero h1 em { color: var(--rosegold); }
+    .blog-hero p { font-size: 15px; color: var(--text-light); max-width: 480px; margin: 0 auto; }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding: 48px 0;
+    }
+    @media(max-width:860px) { .blog-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:540px) { .blog-grid { grid-template-columns: 1fr; } }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════ */
+    footer {
+      background: #2c1f1a;
+      color: rgba(255,255,255,0.75);
+      padding: 56px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    @media(max-width:760px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:400px) { .footer-grid { grid-template-columns: 1fr; } }
+
+    .footer-brand .logo-top { color: var(--white); }
+    .footer-brand .logo-sub { color: var(--rose); }
+    .footer-brand p { font-size: 13px; line-height: 1.7; margin-top: 14px; opacity: 0.65; max-width: 240px; }
+    .footer-col h4 { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rose); margin-bottom: 16px; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col a { font-size: 13.5px; opacity: 0.65; transition: opacity var(--transition); }
+    .footer-col a:hover { opacity: 1; color: var(--rose); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      opacity: 0.5;
+    }
+    .footer-legal { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-legal a:hover { opacity: 1; }
+    .footer-ad { padding: 24px 0; border-top: 1px solid rgba(255,255,255,0.08); }
+
+    /* ═══════════════════════════════════════
+       BACK BUTTON
+    ═══════════════════════════════════════ */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-light);
+      cursor: pointer;
+      margin-bottom: 32px;
+      padding: 8px 16px;
+      border-radius: 99px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      transition: all var(--transition);
+    }
+    .back-btn:hover { border-color: var(--rose); color: var(--rosegold); }
+
+    /* ═══════════════════════════════════════
+       UTILITIES
+    ═══════════════════════════════════════ */
+    .divider { height: 1px; background: var(--border); margin: 48px 0; }
+    .text-center { text-align: center; }
+    .mt-8 { margin-top: 8px; }
+    .badge-new {
+      display: inline-block;
+      background: var(--rosegold);
+      color: var(--white);
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 99px;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+
+    /* Scroll fade */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--cream); }
+    ::-webkit-scrollbar-thumb { background: var(--rose); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--rosegold); }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ ANNOUNCEMENT BAR ══════════════ -->
+<div class="announcement-bar" role="banner">
+  ✨ New: <a href="#" onclick="navigate('blog'); return false;">Easy Equities Beginner's Guide 2025</a> is live — read it now 💸
+</div>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header role="banner">
+  <div class="container header-inner">
+    <div class="logo" onclick="navigate('home')" role="link" aria-label="Just a Girl in Finance - Home">
+      <span class="logo-top">Just a <span class="logo-accent">Girl</span> in Finance</span>
+      <span class="logo-sub">Smart Money · Real Talk · Rose Gold Vibes</span>
+    </div>
+    <nav id="mainNav" role="navigation" aria-label="Main navigation">
+      <a href="#" class="active" onclick="navigate('home'); return false;">Home</a>
+      <a href="#" onclick="navigate('blog'); return false;">Blog</a>
+      <a href="#" onclick="navigate('about'); return false;">About</a>
+      <a href="#" onclick="navigate('contact'); return false;">Contact</a>
+      <a href="#" onclick="navigate('privacy'); return false;">Privacy Policy</a>
+      <a href="#" class="nav-cta" onclick="document.getElementById('newsletter-main').scrollIntoView({behavior:'smooth'}); return false;">Get the Newsletter →</a>
+    </nav>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Toggle menu" role="button">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════ TOP AD UNIT ══════════════ -->
+<div class="top-ad-wrap" id="topAdWrap">
+  <div class="container">
+    <!-- ADSENSE: Replace with your <ins class="adsbygoogle"> tag -->
+    <div class="ad-slot ad-leaderboard" role="complementary" aria-label="Advertisement">
+      <div class="ad-icon">📢</div>
+      <span>Google AdSense — Leaderboard (728×90)</span>
+    </div>
+    <div class="ad-slot ad-mobile" role="complementary" aria-label="Advertisement">
+      <span>AdSense — Mobile Banner (320×100)</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     PAGE: HOME
+════════════════════════════════════════ -->
+<main id="page-home" class="page active">
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <div class="hero-eyebrow">💸 Finance · Investing · Freedom</div>
+      <h1 id="hero-heading">Smart Money for<br><em>Girls Who Want More</em></h1>
+      <p class="hero-sub">Demystifying stocks, investing, Easy Equities, and building wealth — without the boring finance-bro energy.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="navigate('blog')">Read the Blog →</button>
+        <button class="btn-outline" onclick="navigate('about')">My Story</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">42K+</div>
+          <div class="stat-label">Monthly Readers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">150+</div>
+          <div class="stat-label">Finance Guides</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">R100</div>
+          <div class="stat-label">Min. to Start Investing</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">0%</div>
+          <div class="stat-label">Finance Degree Needed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Pills -->
+  <div class="categories-bar">
+    <div class="container">
+      <div class="categories-inner" role="navigation" aria-label="Topic categories">
+        <span class="cat-pill active">✨ All</span>
+        <span class="cat-pill">📈 Investing 101</span>
+        <span class="cat-pill">💼 Easy Equities</span>
+        <span class="cat-pill">💰 Make Money Online</span>
+        <span class="cat-pill">🏠 Real Estate</span>
+        <span class="cat-pill">💳 Budgeting</span>
+        <span class="cat-pill">₿ Crypto</span>
+        <span class="cat-pill">🧾 Tax & SARS</span>
+        <span class="cat-pill">📊 Stock Market News</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-wrap">
+    <div class="container">
+      <div class="content-sidebar">
+
+        <!-- Left: Articles -->
+        <div>
+          <!-- Featured -->
+          <div class="section-head">
+            <h2 class="section-title">Featured</h2>
+          </div>
+          <article class="featured-card reveal" onclick="navigate('article-equities')" role="article">
+            <div class="featured-img"><span class="post-emoji">📱</span></div>
+            <div class="featured-body">
+              <span class="post-tag">Easy Equities</span>
+              <h2>How I Started Investing on Easy Equities With Just R500 (And You Can Too)</h2>
+              <p class="post-excerpt">I was terrified of investing. Then I opened an Easy Equities account on a Sunday afternoon with R500 and everything changed. Here's exactly what I did, step by step.</p>
+              <div class="post-meta">
+                <span>By Mia Laurent</span>
+                <span class="meta-sep">·</span>
+                <span>March 2, 2025</span>
+                <span class="meta-sep">·</span>
+                <span class="read-time">8 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ad in-content after featured -->
+          <div class="ad-slot ad-in-content" role="complementary" aria-label="Advertisement">
+            <div class="ad-icon">📢</div>
+            <span>Google AdSense — In-Content Rectangle (336×280)</span>
+          </div>
+
+          <!-- Posts grid -->
+          <div class="section-head reveal">
+            <h2 class="section-title">Latest Posts</h2>
+            <a class="section-link" href="#" onclick="navigate('blog'); return false;">View all →</a>
+          </div>
+          <div class="posts-grid">
+            <article class="post-card reveal" onclick="navigate('article-index')" role="article">
+              <div class="card-img"><span class="emoji">📊</span></div>
+              <div class="card-body">
+                <span class="post-tag">Investing</span>
+                <h3 class="card-title">The 5 Best ETFs to Buy in South Africa Right Now</h3>
+                <p class="card-excerpt">Low fees, instant diversification, and you can start with R100. Here's what's in my portfolio.</p>
+                <div class="post-meta">
+                  <span class="read-time">6 min read</span><span class="meta-sep">·</span><span>Feb 28</span>
+                </div>
+              </div>
+            </article>
+            <article class="post-card reveal" onclick="navigate('article-money-online')" role="article">
+              <div class="card-img card-img-2"><span class="emoji">💻</span></div>
+              <div class="card-body">
+                <span class="post-tag">Make Money Online</span>
+                <h3 class="card-title">7 Ways I Make Money Online (Real Numbers, No BS) <span class="badge-new">New</span></h3>
+                <p class="card-excerpt">From freelancing to digital products — I broke down every income stream with actual revenue figures.</p>
+                <div class="post-meta">
+                  <span class="read-time">10 min read</span><span class="meta-sep">·</span><span>Feb 25</span>
+                </div>
+              </div>
+            </article>
+            <article class="post-card reveal" onclick="navigate('blog')" role="article">
+              <div class="card-img card-img-3"><span class="emoji">🏦</span></div>
+              <div class="card-body">
+                <span class="post-tag">Budgeting</span>
+                <h3 class="card-title">The 'Latte Factor' is a Lie — What Actually Moves the Needle</h3>
+                <p class="card-excerpt">Skipping your coffee won't make you rich. But these three money habits actually will.</p>
+                <div class="post-meta">
+                  <span class="read-time">5 min read</span><span class="meta-sep">·</span><span>Feb 22</span>
+                </div>
+              </div>
+            </article>
+            <article class="post-card reveal" onclick="navigate('blog')" role="article">
+              <div class="card-img card-img-4"><span class="emoji">🏠</span></div>
+              <div class="card-body">
+                <span class="post-tag">Real Estate</span>
+                <h3 class="card-title">Buy vs. Rent in 2025: The Real Math for South African Women</h3>
+                <p class="card-excerpt">I ran the actual numbers. The answer might surprise you — especially with today's interest rates.</p>
+                <div class="post-meta">
+                  <span class="read-time">7 min read</span><span class="meta-sep">·</span><span>Feb 19</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Second in-content ad -->
+          <div class="ad-slot ad-in-content" role="complementary" aria-label="Advertisement">
+            <div class="ad-icon">📢</div>
+            <span>Google AdSense — In-Content (336×280) — Second Placement</span>
+          </div>
+
+          <!-- More posts list -->
+          <div class="section-head reveal">
+            <h2 class="section-title">More to Read</h2>
+            <a class="section-link" href="#" onclick="navigate('blog'); return false;">All articles →</a>
+          </div>
+          <div class="post-list reveal">
+            <div class="post-list-item" onclick="navigate('blog')">
+              <div class="list-img" style="background:var(--blush);">₿</div>
+              <div class="list-body">
+                <div class="list-title">Is Crypto Still Worth It in 2025? Here's My Honest Take</div>
+                <div class="list-meta">Crypto · Feb 16, 2025 · 6 min read</div>
+              </div>
+            </div>
+            <div class="post-list-item" onclick="navigate('blog')">
+              <div class="list-img" style="background:#fde8f0;">📋</div>
+              <div class="list-body">
+                <div class="list-title">SARS Tax Season 2025: What Every Investor Needs to Know</div>
+                <div class="list-meta">Tax & SARS · Feb 12, 2025 · 9 min read</div>
+              </div>
+            </div>
+            <div class="post-list-item" onclick="navigate('blog')">
+              <div class="list-img" style="background:#f8e8f8;">💳</div>
+              <div class="list-body">
+                <div class="list-title">I Tracked Every Rand I Spent for 30 Days — Here's What I Found</div>
+                <div class="list-meta">Budgeting · Feb 8, 2025 · 5 min read</div>
+              </div>
+            </div>
+            <div class="post-list-item" onclick="navigate('blog')">
+              <div class="list-img" style="background:#fef0e0;">📈</div>
+              <div class="list-body">
+                <div class="list-title">Dividend Investing for Beginners: Earn While You Sleep</div>
+                <div class="list-meta">Investing · Feb 5, 2025 · 8 min read</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Sidebar -->
+        <aside class="sidebar" aria-label="Sidebar">
+
+          <!-- Newsletter widget -->
+          <div class="widget newsletter-widget">
+            <div class="widget-header">💌 Free Newsletter</div>
+            <div class="widget-body">
+              <div class="newsletter-icon">💌</div>
+              <h3>Money Notes, Weekly</h3>
+              <p>Get one actionable money tip every Sunday morning. No spam, ever. Unsubscribe any time.</p>
+              <input type="email" id="sidebar-email-1" class="newsletter-input" placeholder="hello@youremail.com" aria-label="Email address" />
+              <button id="sidebar-btn-1" class="newsletter-btn" onclick="subscribeBrevo('sidebar-email-1','sidebar-btn-1')">Subscribe Free →</button>
+            </div>
+          </div>
+
+          <!-- Sidebar ad — half page -->
+          <div class="widget" style="overflow:hidden;">
+            <div class="widget-header">Advertisement</div>
+            <div class="ad-slot ad-half-page" style="border:none; border-radius:0;" role="complementary" aria-label="Advertisement">
+              <div class="ad-icon">📢</div>
+              <span>AdSense — Half Page (300×600)<br>Highest RPM unit</span>
+            </div>
+          </div>
+
+          <!-- Categories widget -->
+          <div class="widget">
+            <div class="widget-header">Browse Topics</div>
+            <div class="widget-body" style="padding:8px 20px;">
+              <div class="cat-list">
+                <div class="cat-list-item" onclick="navigate('blog')"><span>📈 Investing 101</span><span class="cat-count">24</span></div>
+                <div class="cat-list-item" onclick="navigate('blog')"><span>💼 Easy Equities</span><span class="cat-count">18</span></div>
+                <div class="cat-list-item" onclick="navigate('blog')"><span>💰 Make Money Online</span><span class="cat-count">15</span></div>
+                <div class="cat-list-item" onclick="navigate('blog')"><span>🏠 Real Estate</span><span class="cat-count">12</span></div>
+                <div class="cat-list-item" onclick="navigate('blog')"><span>💳 Budgeting</span><span class="cat-count">21</span></div>
+                <div class="cat-list-item" onclick="navigate('blog')"><span>₿ Crypto</span><span class="cat-count">9</span></div>
+                <div class="cat-list-item" onclick="navigate('blog')"><span>🧾 Tax & SARS</span><span class="cat-count">7</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent posts widget -->
+          <div class="widget">
+            <div class="widget-header">Recent Posts</div>
+            <div class="widget-body" style="padding:8px 20px;">
+              <div class="recent-post" onclick="navigate('article-equities')">
+                <div class="recent-thumb" style="background:var(--blush);">📱</div>
+                <div><div class="recent-title">How I Started on Easy Equities With R500</div><div class="recent-date">Mar 2, 2025</div></div>
+              </div>
+              <div class="recent-post" onclick="navigate('article-index')">
+                <div class="recent-thumb" style="background:#fde8f0;">📊</div>
+                <div><div class="recent-title">The 5 Best ETFs to Buy Right Now</div><div class="recent-date">Feb 28, 2025</div></div>
+              </div>
+              <div class="recent-post" onclick="navigate('article-money-online')">
+                <div class="recent-thumb" style="background:#f8e8f8;">💻</div>
+                <div><div class="recent-title">7 Ways I Make Money Online (Real Numbers)</div><div class="recent-date">Feb 25, 2025</div></div>
+              </div>
+              <div class="recent-post" onclick="navigate('blog')">
+                <div class="recent-thumb" style="background:#fef0e0;">🏦</div>
+                <div><div class="recent-title">The 'Latte Factor' is a Lie</div><div class="recent-date">Feb 22, 2025</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar rectangle ad -->
+          <div class="widget" style="overflow:hidden;">
+            <div class="widget-header">Advertisement</div>
+            <div class="ad-slot ad-rectangle" style="border:none; border-radius:0;" role="complementary" aria-label="Advertisement">
+              <div class="ad-icon">📢</div>
+              <span>AdSense — Rectangle (300×250)</span>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter section -->
+  <section class="newsletter-section" id="newsletter-main" aria-labelledby="newsletter-heading">
+    <div class="container">
+      <h2 id="newsletter-heading">Get <em>Money Notes</em> Every Sunday</h2>
+      <p>One actionable finance tip, zero fluff, straight to your inbox. Loved by 42,000+ women.</p>
+      <div class="newsletter-form">
+        <input type="email" id="main-newsletter-email" placeholder="your@email.com" aria-label="Email address for newsletter" />
+        <button id="main-newsletter-btn" onclick="subscribeBrevoMain()">Join Free →</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ════════════════════════════════════════
+     PAGE: BLOG
+════════════════════════════════════════ -->
+<main id="page-blog" class="page" role="main">
+  <div class="blog-hero">
+    <div class="container">
+      <h1>The Blog — <em>All Posts</em></h1>
+      <p>Finance made simple, stylish, and actually exciting. Browse everything below 💅</p>
+    </div>
+  </div>
+  <div class="top-ad-wrap">
+    <div class="container">
+      <div class="ad-slot ad-leaderboard" role="complementary" aria-label="Advertisement">
+        <div class="ad-icon">📢</div><span>AdSense — Leaderboard (728×90)</span>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="categories-inner" style="padding:24px 0; overflow-x:auto; display:flex; gap:8px;">
+      <span class="cat-pill active">All</span>
+      <span class="cat-pill">📈 Investing</span>
+      <span class="cat-pill">💼 Easy Equities</span>
+      <span class="cat-pill">💰 Make Money Online</span>
+      <span class="cat-pill">💳 Budgeting</span>
+      <span class="cat-pill">₿ Crypto</span>
+    </div>
+    <div class="blog-grid">
+      <article class="post-card" onclick="navigate('article-equities')"><div class="card-img"><span class="emoji">📱</span></div><div class="card-body"><span class="post-tag">Easy Equities</span><h3 class="card-title">How I Started on Easy Equities With Just R500</h3><p class="card-excerpt">Step-by-step beginner guide to SA's top investing app.</p><div class="post-meta"><span class="read-time">8 min</span><span class="meta-sep">·</span><span>Mar 2</span></div></div></article>
+      <article class="post-card" onclick="navigate('article-index')"><div class="card-img card-img-2"><span class="emoji">📊</span></div><div class="card-body"><span class="post-tag">Investing</span><h3 class="card-title">The 5 Best ETFs to Buy in South Africa Right Now</h3><p class="card-excerpt">Low fees, instant diversification, R100 minimum.</p><div class="post-meta"><span class="read-time">6 min</span><span class="meta-sep">·</span><span>Feb 28</span></div></div></article>
+      <article class="post-card" onclick="navigate('article-money-online')"><div class="card-img card-img-3"><span class="emoji">💻</span></div><div class="card-body"><span class="post-tag">Make Money Online</span><h3 class="card-title">7 Ways I Make Money Online (Real Numbers) <span class="badge-new">New</span></h3><p class="card-excerpt">Honest income report with actual figures.</p><div class="post-meta"><span class="read-time">10 min</span><span class="meta-sep">·</span><span>Feb 25</span></div></div></article>
+      <article class="post-card" onclick="navigate('blog')"><div class="card-img card-img-4"><span class="emoji">🏦</span></div><div class="card-body"><span class="post-tag">Budgeting</span><h3 class="card-title">The 'Latte Factor' is a Lie — What Actually Moves the Needle</h3><p class="card-excerpt">Stop blaming your coffee. Here's what actually builds wealth.</p><div class="post-meta"><span class="read-time">5 min</span><span class="meta-sep">·</span><span>Feb 22</span></div></div></article>
+      <article class="post-card" onclick="navigate('blog')"><div class="card-img card-img-5"><span class="emoji">₿</span></div><div class="card-body"><span class="post-tag">Crypto</span><h3 class="card-title">Is Crypto Still Worth It in 2025? My Honest Take</h3><p class="card-excerpt">The truth about crypto after holding through a bear market.</p><div class="post-meta"><span class="read-time">6 min</span><span class="meta-sep">·</span><span>Feb 16</span></div></div></article>
+      <article class="post-card" onclick="navigate('blog')"><div class="card-img card-img-6"><span class="emoji">🏠</span></div><div class="card-body"><span class="post-tag">Real Estate</span><h3 class="card-title">Buy vs. Rent in 2025: The Real Math</h3><p class="card-excerpt">I did the numbers so you don't have to.</p><div class="post-meta"><span class="read-time">7 min</span><span class="meta-sep">·</span><span>Feb 19</span></div></div></article>
+      <article class="post-card" onclick="navigate('blog')"><div class="card-img"><span class="emoji">🧾</span></div><div class="card-body"><span class="post-tag">Tax & SARS</span><h3 class="card-title">SARS Tax Season 2025: What Every Investor Needs to Know</h3><p class="card-excerpt">CGT, dividends, and what to declare — simplified.</p><div class="post-meta"><span class="read-time">9 min</span><span class="meta-sep">·</span><span>Feb 12</span></div></div></article>
+      <article class="post-card" onclick="navigate('blog')"><div class="card-img card-img-2"><span class="emoji">💰</span></div><div class="card-body"><span class="post-tag">Investing</span><h3 class="card-title">Dividend Investing for Beginners: Earn While You Sleep</h3><p class="card-excerpt">Build a portfolio that pays you every quarter.</p><div class="post-meta"><span class="read-time">8 min</span><span class="meta-sep">·</span><span>Feb 5</span></div></div></article>
+      <article class="post-card" onclick="navigate('blog')"><div class="card-img card-img-3"><span class="emoji">💳</span></div><div class="card-body"><span class="post-tag">Budgeting</span><h3 class="card-title">I Tracked Every Rand for 30 Days — Here's What I Found</h3><p class="card-excerpt">A full spending audit that changed how I manage money.</p><div class="post-meta"><span class="read-time">5 min</span><span class="meta-sep">·</span><span>Feb 8</span></div></div></article>
+    </div>
+    <!-- Pagination placeholder -->
+    <div style="text-align:center; padding-bottom:48px;">
+      <button class="btn-outline">Load More Posts</button>
+    </div>
+  </div>
+</main>
+
+
+<!-- ════════════════════════════════════════
+     PAGE: ARTICLE — EASY EQUITIES
+════════════════════════════════════════ -->
+<main id="page-article-equities" class="page" role="main">
+  <div class="container article-wrap">
+    <button class="back-btn" onclick="navigate('home')">← Back to Home</button>
+
+    <!-- Top article ad -->
+    <div class="ad-slot ad-leaderboard" style="margin-bottom:28px;" role="complementary" aria-label="Advertisement">
+      <div class="ad-icon">📢</div><span>AdSense — Leaderboard (728×90)</span>
+    </div>
+
+    <header class="article-header">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="#" onclick="navigate('home');return false;">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="#" onclick="navigate('blog');return false;">Blog</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Easy Equities</span>
+      </nav>
+      <span class="post-tag">💼 Easy Equities</span>
+      <h1 class="article-title">How I Started Investing on Easy Equities With Just R500 (And You Can Too)</h1>
+      <div class="post-meta" style="margin-top:16px; font-size:13px;">
+        <span>By <strong>Mia Laurent</strong></span>
+        <span class="meta-sep">·</span>
+        <span>March 2, 2025</span>
+        <span class="meta-sep">·</span>
+        <span class="read-time">8 min read</span>
+        <span class="meta-sep">·</span>
+        <span>Easy Equities, Investing 101</span>
+      </div>
+    </header>
+
+    <div class="article-hero-img" role="img" aria-label="Article featured image">📱</div>
+
+    <div class="article-grid">
+      <div>
+        <div class="article-body">
+          <p>I remember the exact moment I decided to stop being scared of investing. It was a Sunday, I was in my pyjamas eating cereal, and I saw a tweet from a girl who said she bought her first stock with R500 on <strong>Easy Equities</strong>. I thought: if she can do it, I can do it.</p>
+
+          <p>Three years later, that R500 has turned into a portfolio I'm genuinely proud of. And today I'm going to show you exactly how I did it — step by step, no finance degree required.</p>
+
+          <div class="callout">
+            <div class="callout-title">✨ Quick Note</div>
+            <p>This is not financial advice. I'm sharing my personal experience. Always do your own research and consider speaking to a certified financial planner before investing.</p>
+          </div>
+
+          <h2>What Is Easy Equities?</h2>
+          <p>Easy Equities is a South African investment platform that lets you buy shares, ETFs, and unit trusts starting from as little as <strong>R5</strong>. Yes, R5. You don't need to buy a whole share — you buy a fraction, which means even expensive stocks like Naspers are accessible to everyday people.</p>
+          <p>It's available as an app (iOS and Android) and a web platform. It's regulated by the FSCA, so your money is protected. And the fees? Way lower than traditional brokers.</p>
+
+          <h2>Step 1: Download the App & Open Your Account</h2>
+          <p>Go to the App Store or Google Play and search "Easy Equities." Download it, open it, and tap <strong>"Register."</strong> You'll need:</p>
+          <ul>
+            <li>Your South African ID number</li>
+            <li>A selfie for FICA verification</li>
+            <li>Your bank account details</li>
+            <li>A few minutes (seriously, it's fast)</li>
+          </ul>
+          <p>The account verification usually takes 24–48 hours. Once you're approved, you can fund your account.</p>
+
+          <h2>Step 2: Choose Your Account Type</h2>
+          <p>Easy Equities offers several account types. For beginners, I recommend starting with:</p>
+          <ul>
+            <li><strong>ZAR Account</strong> — Buy SA-listed shares and ETFs in rands. Perfect starting point.</li>
+            <li><strong>TFSA (Tax-Free Savings Account)</strong> — Invest up to R36,000/year completely tax-free. This is a MUST for beginners. Start here.</li>
+            <li><strong>USD Account</strong> — Buy US stocks like Apple, Tesla, and S&P 500 ETFs. Great for diversification once you're comfortable.</li>
+          </ul>
+
+          <blockquote>"The best investment you can make is in a Tax-Free Savings Account. The government literally gives you free money by not taxing your returns."</blockquote>
+
+          <!-- In-content ad mid-article -->
+          <div class="ad-slot ad-in-content" role="complementary" aria-label="Advertisement">
+            <div class="ad-icon">📢</div><span>AdSense — In-Content (336×280)</span>
+          </div>
+
+          <h2>Step 3: Fund Your Account</h2>
+          <p>Tap the "Add Funds" button and do an EFT to the Easy Equities bank account. The reference number is your unique account number. Funds usually reflect within a few hours during banking hours.</p>
+          <p>I started with R500. You absolutely don't need more than that. The platform lets you buy <strong>fractional shares</strong>, so you're never locked out of a stock because you can't afford a full share.</p>
+
+          <h2>Step 4: Buy Your First Investment</h2>
+          <p>For your very first investment, I recommend keeping it simple: <strong>a broad market ETF</strong>. Here's why:</p>
+          <ul>
+            <li>ETFs are diversified — you own a tiny piece of many companies</li>
+            <li>They have low fees (expense ratios of 0.1–0.5%)</li>
+            <li>They outperform most actively managed funds over the long term</li>
+            <li>No stock-picking stress</li>
+          </ul>
+          <p>My first buy was the <strong>Satrix MSCI World ETF</strong> — it gives you exposure to 1,500+ companies across 23 developed countries. R500 into that ETF and I was officially a global investor. It felt incredible.</p>
+
+          <h2>Step 5: Set Up a Monthly Debit Order</h2>
+          <p>This is the secret sauce. Set up an automatic monthly investment — even R200/month. On Easy Equities, you can do this via their <strong>Bundle</strong> feature. You pick the ETF, set the amount, and it buys automatically on a set date every month.</p>
+          <p>This is called <strong>rand-cost averaging</strong> — you buy when prices are high and when they're low, so your average cost stays reasonable over time. You completely remove the stress of "is now a good time to invest?"</p>
+
+          <!-- Second in-content ad -->
+          <div class="ad-slot ad-in-content" role="complementary" aria-label="Advertisement">
+            <div class="ad-icon">📢</div><span>AdSense — In-Content (336×280) — Second Placement</span>
+          </div>
+
+          <h2>My Portfolio 3 Years Later</h2>
+          <p>I started with R500 in early 2022. Today, my Easy Equities portfolio is worth significantly more — not because I'm a genius, but because I stayed consistent. I invested every single month, didn't panic-sell when markets dropped, and kept learning.</p>
+          <p>The biggest lesson? <strong>Starting is the hardest part.</strong> Once you buy your first share, it becomes real, exciting, and deeply motivating to keep going.</p>
+
+          <!-- FAQ Section -->
+          <section class="faq-section" aria-labelledby="faq-heading">
+            <h2 id="faq-heading">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                <span>Is Easy Equities safe? Is my money protected?</span>
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-a">Yes. Easy Equities is regulated by the Financial Sector Conduct Authority (FSCA) in South Africa. Your investments are held in your name through Purple Group, the JSE-listed parent company. Your shares are registered in your name, not the company's, which means they're protected even if Easy Equities were to close.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                <span>What is the minimum amount to invest on Easy Equities?</span>
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-a">You can invest from as little as R5 on Easy Equities. The platform uses fractional investing, which means you buy a portion of a share — so even the most expensive stocks on the JSE and NYSE are accessible with small amounts.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                <span>What's the difference between a TFSA and a regular account?</span>
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-a">A Tax-Free Savings Account (TFSA) allows you to invest up to R36,000 per year (R500,000 lifetime) without paying any tax on dividends, interest, or capital gains. It's one of the best tools for long-term wealth building in SA. A regular account is taxed on profits. For most beginners, maximizing the TFSA first is the smart move.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                <span>Which ETF should a beginner buy first?</span>
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-a">For most South African beginners, I recommend starting with either the Satrix MSCI World ETF (global exposure) or the Satrix S&P 500 ETF (US exposure). Both have low fees and give you instant diversification across hundreds of companies. If you want SA-specific exposure, the Satrix 40 ETF tracks the top 40 JSE companies.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">
+                <span>Can I withdraw my money at any time?</span>
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-a">Yes — you can sell your investments and withdraw at any time. However, investing should be a long-term game (5+ years). Selling when markets dip locks in losses. The longer you stay invested, the more time compound growth has to work in your favour.</div>
+            </div>
+          </section>
+
+        </div><!-- /article-body -->
+      </div>
+
+      <!-- Article sidebar -->
+      <aside class="sidebar" aria-label="Article sidebar">
+        <div class="widget newsletter-widget">
+          <div class="widget-header">💌 Get More Tips</div>
+          <div class="widget-body">
+            <div class="newsletter-icon">💌</div>
+            <h3>Money Notes, Weekly</h3>
+            <p>One investing tip every Sunday. Free forever.</p>
+            <input type="email" class="newsletter-input" placeholder="your@email.com" aria-label="Email for newsletter" />
+            <button class="newsletter-btn" onclick="this.textContent='✓ Subscribed! 👑'">Join Free →</button>
+          </div>
+        </div>
+        <div class="widget" style="overflow:hidden;">
+          <div class="widget-header">Advertisement</div>
+          <div class="ad-slot ad-half-page" style="border:none;border-radius:0;" role="complementary" aria-label="Advertisement">
+            <div class="ad-icon">📢</div><span>AdSense — 300×600</span>
+          </div>
+        </div>
+        <div class="widget">
+          <div class="widget-header">Related Posts</div>
+          <div class="widget-body" style="padding:8px 20px;">
+            <div class="recent-post" onclick="navigate('article-index')">
+              <div class="recent-thumb" style="background:#fde8f0;">📊</div>
+              <div><div class="recent-title">The 5 Best ETFs to Buy Right Now</div><div class="recent-date">Feb 28, 2025</div></div>
+            </div>
+            <div class="recent-post" onclick="navigate('blog')">
+              <div class="recent-thumb" style="background:#f8e8f8;">🧾</div>
+              <div><div class="recent-title">SARS Tax Season: What Investors Need to Know</div><div class="recent-date">Feb 12, 2025</div></div>
+            </div>
+            <div class="recent-post" onclick="navigate('blog')">
+              <div class="recent-thumb" style="background:#fef0e0;">💰</div>
+              <div><div class="recent-title">Dividend Investing for Beginners</div><div class="recent-date">Feb 5, 2025</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="widget" style="overflow:hidden;">
+          <div class="widget-header">Advertisement</div>
+          <div class="ad-slot ad-rectangle" style="border:none;border-radius:0;" role="complementary" aria-label="Advertisement">
+            <div class="ad-icon">📢</div><span>AdSense — 300×250</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Post-article ad -->
+    <div class="ad-slot" style="height:250px; margin-top:48px;" role="complementary" aria-label="Advertisement">
+      <div class="ad-icon">📢</div><span>AdSense — Post-Article Responsive / 728×90</span>
+    </div>
+  </div>
+</main>
+
+
+<!-- ════════════════════════════════════════
+     PAGE: ARTICLE — ETF INDEX
+════════════════════════════════════════ -->
+<main id="page-article-index" class="page" role="main">
+  <div class="container article-wrap">
+    <button class="back-btn" onclick="navigate('home')">← Back to Home</button>
+    <div class="ad-slot ad-leaderboard" style="margin-bottom:28px;" role="complementary" aria-label="Advertisement">
+      <div class="ad-icon">📢</div><span>AdSense — Leaderboard (728×90)</span>
+    </div>
+    <header class="article-header">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="#" onclick="navigate('home');return false;">Home</a><span class="breadcrumb-sep">/</span>
+        <a href="#" onclick="navigate('blog');return false;">Blog</a><span class="breadcrumb-sep">/</span>
+        <span>Investing</span>
+      </nav>
+      <span class="post-tag">📊 Investing</span>
+      <h1 class="article-title">The 5 Best ETFs to Buy in South Africa Right Now</h1>
+      <div class="post-meta" style="margin-top:16px; font-size:13px;">
+        <span>By <strong>Mia Laurent</strong></span><span class="meta-sep">·</span>
+        <span>February 28, 2025</span><span class="meta-sep">·</span>
+        <span class="read-time">6 min read</span>
+      </div>
+    </header>
+    <div class="article-hero-img" role="img" aria-label="Article image">📊</div>
+    <div class="article-grid">
+      <div>
+        <div class="article-body">
+          <p>If you're just starting out, the ETF world can feel overwhelming. There are hundreds of options, confusing ticker symbols, and everyone seems to have a different opinion. So let me cut through the noise and give you my top 5 ETF picks for South African investors in 2025.</p>
+          <p><strong>Disclaimer:</strong> This is not financial advice. I'm sharing my personal research. Please consult a certified financial planner for personalised advice.</p>
+
+          <h2>What Is an ETF and Why Should You Care?</h2>
+          <p>An Exchange-Traded Fund (ETF) is a basket of investments — shares, bonds, or commodities — that trades on a stock exchange just like a regular share. When you buy one ETF, you instantly own a tiny piece of every company in that basket. It's diversification made simple.</p>
+
+          <h2>1. Satrix MSCI World ETF (STXWDM)</h2>
+          <p>This is my personal favourite and forms the core of my TFSA portfolio. It tracks 1,500+ companies across 23 developed countries — think Apple, Microsoft, Samsung, Nestlé, and Toyota all in one fund. Expense ratio: <strong>0.35%</strong>. Available on Easy Equities from R5.</p>
+
+          <div class="ad-slot ad-in-content" role="complementary" aria-label="Advertisement"><div class="ad-icon">📢</div><span>AdSense — In-Content (336×280)</span></div>
+
+          <h2>2. Satrix S&P 500 ETF (STX500)</h2>
+          <p>Tracks the 500 largest US companies. The S&P 500 has historically returned ~10% per year over the long term. If you believe in the US economy — and history suggests you should — this is a no-brainer. Expense ratio: <strong>0.30%</strong>.</p>
+
+          <h2>3. Satrix 40 ETF (STX40)</h2>
+          <p>This tracks the top 40 companies on the JSE — Naspers, Standard Bank, Richemont, Anglo American, and more. It's your South African anchor. Great for rand-denominated exposure and slightly lower volatility. Expense ratio: <strong>0.10%</strong> — one of the cheapest on the market.</p>
+
+          <h2>4. CoreShares S&P 500 (CSSP500)</h2>
+          <p>Another US market tracker, but this one compounds your dividends automatically (accumulating ETF). Slightly different holdings weighting to the Satrix S&P 500 — I hold both. Expense ratio: <strong>0.20%</strong>.</p>
+
+          <h2>5. Satrix Emerging Markets ETF (STXEMG)</h2>
+          <p>For higher growth potential (and higher risk), the Emerging Markets ETF gives you exposure to companies in China, India, Brazil, South Korea, and more. It's more volatile, but over a 10+ year horizon, it's been a strong performer. Expense ratio: <strong>0.40%</strong>.</p>
+
+          <blockquote>"You don't need to pick winners. You just need to own the whole game."</blockquote>
+
+          <div class="ad-slot ad-in-content" role="complementary" aria-label="Advertisement"><div class="ad-icon">📢</div><span>AdSense — In-Content (336×280) — Second</span></div>
+
+          <h2>My Simple ETF Strategy</h2>
+          <p>I split my monthly TFSA contribution like this: 50% MSCI World, 30% S&P 500, 20% Satrix 40. Simple. Boring. Effective. I haven't changed this allocation in two years and I'm comfortable watching it grow quietly in the background while I get on with my life.</p>
+
+          <section class="faq-section" aria-labelledby="faq2-heading">
+            <h2 id="faq2-heading">Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)"><span>Are ETFs safer than individual stocks?</span><span class="faq-icon">+</span></div>
+              <div class="faq-a">Generally, yes. Because ETFs hold many stocks, the failure of one company has minimal impact on your overall investment. With individual stocks, one bad earnings report can wipe out 20% of your investment overnight. ETFs spread that risk automatically.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)"><span>Can I buy ETFs through my TFSA on Easy Equities?</span><span class="faq-icon">+</span></div>
+              <div class="faq-a">Yes! Easy Equities offers a TFSA account type. All the ETFs I mentioned above are available in the TFSA. This is the most tax-efficient way to invest in ETFs as a South African resident.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)"><span>How often should I buy more ETFs?</span><span class="faq-icon">+</span></div>
+              <div class="faq-a">I invest monthly on the same date every month. This is called rand-cost averaging and removes the stress of timing the market. Most experts agree: time in the market beats timing the market.</div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <aside class="sidebar">
+        <div class="widget newsletter-widget">
+          <div class="widget-header">💌 Free Newsletter</div>
+          <div class="widget-body">
+            <div class="newsletter-icon">💌</div>
+            <h3>Money Notes</h3>
+            <p>Weekly investing tips, free forever.</p>
+            <input type="email" id="sidebar-email-3" class="newsletter-input" placeholder="your@email.com" aria-label="Email" />
+            <button id="sidebar-btn-3" class="newsletter-btn" onclick="subscribeBrevo('sidebar-email-3','sidebar-btn-3')">Subscribe →</button>
+          </div>
+        </div>
+        <div class="widget" style="overflow:hidden;">
+          <div class="widget-header">Advertisement</div>
+          <div class="ad-slot ad-half-page" style="border:none;border-radius:0;"><div class="ad-icon">📢</div><span>AdSense 300×600</span></div>
+        </div>
+        <div class="widget" style="overflow:hidden;">
+          <div class="widget-header">Advertisement</div>
+          <div class="ad-slot ad-rectangle" style="border:none;border-radius:0;"><div class="ad-icon">📢</div><span>AdSense 300×250</span></div>
+        </div>
+      </aside>
+    </div>
+    <div class="ad-slot" style="height:250px;margin-top:48px;"><div class="ad-icon">📢</div><span>AdSense — Post-Article Responsive</span></div>
+  </div>
+</main>
+
+
+<!-- ════════════════════════════════════════
+     PAGE: ARTICLE — MAKE MONEY ONLINE
+════════════════════════════════════════ -->
+<main id="page-article-money-online" class="page" role="main">
+  <div class="container article-wrap">
+    <button class="back-btn" onclick="navigate('home')">← Back to Home</button>
+    <div class="ad-slot ad-leaderboard" style="margin-bottom:28px;"><div class="ad-icon">📢</div><span>AdSense — Leaderboard (728×90)</span></div>
+    <header class="article-header">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="#" onclick="navigate('home');return false;">Home</a><span class="breadcrumb-sep">/</span>
+        <a href="#" onclick="navigate('blog');return false;">Blog</a><span class="breadcrumb-sep">/</span><span>Make Money Online</span>
+      </nav>
+      <span class="post-tag">💰 Make Money Online</span>
+      <h1 class="article-title">7 Ways I Make Money Online (Real Numbers, No BS)</h1>
+      <div class="post-meta" style="margin-top:16px;font-size:13px;">
+        <span>By <strong>Mia Laurent</strong></span><span class="meta-sep">·</span>
+        <span>February 25, 2025</span><span class="meta-sep">·</span>
+        <span class="read-time">10 min read</span>
+      </div>
+    </header>
+    <div class="article-hero-img">💻</div>
+    <div class="article-grid">
+      <div>
+        <div class="article-body">
+          <p>I'm going to be fully transparent with you. I hate "make money online" articles that promise the world and deliver nothing. So this is my actual income report — what I do, how I do it, and roughly how much I make from each stream.</p>
+          <p>None of these happened overnight. I built each income stream over months (some over years). But if I can do it starting from zero, you can too.</p>
+
+          <h2>1. This Blog (Display Advertising) — ~R3,500–R6,000/month</h2>
+          <p>My blog earns through Google AdSense and Mediavine display advertising. Once your traffic hits around 10,000 monthly sessions, you can apply for better ad networks. The key is consistent, high-quality content in a niche advertisers love (finance is one of the best-paying niches).</p>
+
+          <h2>2. Affiliate Marketing — ~R2,000–R4,500/month</h2>
+          <p>I recommend products and platforms I actually use — Easy Equities, budgeting apps, financial courses — and earn a commission when readers sign up through my links. Honesty is everything here. I only promote what I genuinely believe in.</p>
+
+          <div class="ad-slot ad-in-content"><div class="ad-icon">📢</div><span>AdSense — In-Content (336×280)</span></div>
+
+          <h2>3. Digital Products (eBooks & Guides) — ~R1,800–R3,000/month</h2>
+          <p>I created a beginner's guide to investing on Easy Equities and a budgeting spreadsheet. I sell both on Gumroad. Once created, digital products sell passively — I do zero extra work and money comes in while I sleep. This is genuinely my favourite income stream.</p>
+
+          <h2>4. Freelance Writing — ~R4,000–R8,000/month</h2>
+          <p>Finance and investment companies need content writers. I write blog posts, email newsletters, and social media content for fintech brands. I charge per word or per project. Finding clients: LinkedIn, direct pitching, and word of mouth.</p>
+
+          <h2>5. Pinterest Traffic Monetisation — ~R800–R1,500/month</h2>
+          <p>Pinterest drives significant traffic to my blog, which increases ad revenue. I spend about 2 hours a week creating pins. It's an underrated traffic source for women's finance content.</p>
+
+          <h2>6. Online Tutoring (Finance & Budgeting) — ~R1,500–R2,500/month</h2>
+          <p>I offer 1-on-1 "Money Clarity Sessions" via Zoom where I help people set up their budgets, understand their investments, and create a financial plan. I book these through Calendly and charge R500–R800 per session.</p>
+
+          <div class="ad-slot ad-in-content"><div class="ad-icon">📢</div><span>AdSense — In-Content (336×280) — Second</span></div>
+
+          <h2>7. Stock Market Returns — Varies</h2>
+          <p>My Easy Equities portfolio also generates passive income through dividends and capital appreciation. I don't count this as "income" per se, but it's wealth being built quietly every month. And when I eventually sell (decades from now), it'll be a significant sum.</p>
+
+          <blockquote>"Multiple income streams aren't about being greedy — they're about being protected."</blockquote>
+
+          <h2>The Total & What It Took</h2>
+          <p>On a good month, I bring in between R15,000–R25,000 from all online streams combined. But it took me 3 years of consistent effort to get here. I want you to know that not for discouragement — but for honesty. This is real work. But it's also genuinely flexible, scalable, and something you can build alongside a full-time job.</p>
+
+          <section class="faq-section" aria-labelledby="faq3-heading">
+            <h2 id="faq3-heading">Frequently Asked Questions</h2>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)"><span>Which online income stream should a beginner start with?</span><span class="faq-icon">+</span></div>
+              <div class="faq-a">For most beginners, I'd recommend starting with either freelance writing (fastest to earn money) or starting a blog (longest-term, but potentially highest ceiling). If you have a specific skill, offer it as a service first to generate income while building your long-term assets.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)"><span>Do I need to pay tax on online income in South Africa?</span><span class="faq-icon">+</span></div>
+              <div class="faq-a">Yes. If you earn income from any source — including online income, freelancing, blog ads, or affiliate marketing — it must be declared to SARS. The tax threshold for the 2025/2026 year is R95,750 for those under 65. Always keep records of your income and consult a tax practitioner if unsure.</div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)"><span>How long does it take to make money blogging?</span><span class="faq-icon">+</span></div>
+              <div class="faq-a">Most bloggers start seeing real income around 12–18 months in. SEO takes time. The blogs that succeed are the ones that consistently publish valuable content and build an audience before monetising. Treat it as a long-term asset, not a quick income stream.</div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <aside class="sidebar">
+        <div class="widget newsletter-widget">
+          <div class="widget-header">💌 Free Newsletter</div>
+          <div class="widget-body">
+            <div class="newsletter-icon">💌</div>
+            <h3>Money Notes, Weekly</h3>
+            <p>One money tip every Sunday. Free.</p>
+            <input type="email" id="sidebar-email-4" class="newsletter-input" placeholder="your@email.com" aria-label="Email" />
+            <button id="sidebar-btn-4" class="newsletter-btn" onclick="subscribeBrevo('sidebar-email-4','sidebar-btn-4')">Subscribe →</button>
+          </div>
+        </div>
+        <div class="widget" style="overflow:hidden;">
+          <div class="widget-header">Advertisement</div>
+          <div class="ad-slot ad-half-page" style="border:none;border-radius:0;"><div class="ad-icon">📢</div><span>AdSense 300×600</span></div>
+        </div>
+        <div class="widget" style="overflow:hidden;">
+          <div class="widget-header">Advertisement</div>
+          <div class="ad-slot ad-rectangle" style="border:none;border-radius:0;"><div class="ad-icon">📢</div><span>AdSense 300×250</span></div>
+        </div>
+      </aside>
+    </div>
+    <div class="ad-slot" style="height:250px;margin-top:48px;"><div class="ad-icon">📢</div><span>AdSense — Post-Article Responsive</span></div>
+  </div>
+</main>
+
+
+<!-- ════════════════════════════════════════
+     PAGE: ABOUT
+════════════════════════════════════════ -->
+<main id="page-about" class="page" role="main">
+  <div class="about-hero">
+    <div class="container">
+      <div class="about-avatar" role="img" aria-label="Author avatar">👩🏽</div>
+      <h1>Hi, I'm Mia — <em>Just a Girl in Finance</em></h1>
+      <p>I turned financial confusion into financial confidence. Now I help other women do the same.</p>
+    </div>
+  </div>
+  <div class="top-ad-wrap">
+    <div class="container">
+      <div class="ad-slot ad-leaderboard"><div class="ad-icon">📢</div><span>AdSense — Leaderboard (728×90)</span></div>
+    </div>
+  </div>
+  <div class="about-content">
+    <h2>My Story</h2>
+    <p>I graduated with a degree in Communications, not Finance. I didn't grow up learning about stocks or compound interest. In fact, for most of my twenties, I avoided money conversations because they made me feel stupid.</p>
+    <p>Then, at 26, I realised I was working full-time, earning a decent salary, and somehow still living paycheck to paycheck. Something had to change. So I started reading — obsessively. Books, articles, YouTube videos. I opened an Easy Equities account. I started a spreadsheet. I started talking to other women about money.</p>
+    <p>What I discovered was that most financial content was written by men, for men. The examples were always "bro" examples. The language was always intimidating. I thought: why isn't there a space for women who just want straight-talking, judgment-free money advice?</p>
+    <h2>Why This Blog Exists</h2>
+    <p>I created <strong>Just a Girl in Finance</strong> because I needed it and it didn't exist. Every article I write is the article I wish I had when I was starting out — clear, honest, practical, and never condescending.</p>
+    <p>This blog covers everything from opening your first Easy Equities account to building a multi-income lifestyle. Whether you have R100 or R100,000 to invest, you belong here.</p>
+    <h2>What You'll Find Here</h2>
+    <p>Investing guides. ETF comparisons. How to make money online. Easy Equities tutorials. SARS and tax explanations. Real estate 101. Budgeting strategies that actually work. And my honest personal finance journey — wins, mistakes, and everything in between.</p>
+    <h2>Let's Connect</h2>
+    <p>Have a question? A topic you want covered? I'd love to hear from you. <a href="#" onclick="navigate('contact');return false;" style="color:var(--rosegold);border-bottom:1px solid var(--rose);">Send me a message</a> or find me on Instagram and Twitter @girlInFinance_.</p>
+    <p><em>— Mia 💸</em></p>
+  </div>
+</main>
+
+
+<!-- ════════════════════════════════════════
+     PAGE: CONTACT
+════════════════════════════════════════ -->
+<main id="page-contact" class="page" role="main">
+  <div class="top-ad-wrap">
+    <div class="container">
+      <div class="ad-slot ad-leaderboard"><div class="ad-icon">📢</div><span>AdSense — Leaderboard (728×90)</span></div>
+    </div>
+  </div>
+  <div class="contact-wrap">
+    <h1>Say <em>Hello</em> 💌</h1>
+    <p>Have a question, a collaboration idea, or just want to chat money? I read every message and reply to most. Fill in the form below!</p>
+    <form class="contact-form" onsubmit="handleContactSubmit(event)">
+      <div class="form-group">
+        <label for="contact-name">Your Name</label>
+        <input type="text" id="contact-name" placeholder="Your full name" required />
+      </div>
+      <div class="form-group">
+        <label for="contact-email">Email Address</label>
+        <input type="email" id="contact-email" placeholder="your@email.com" required />
+      </div>
+      <div class="form-group">
+        <label for="contact-subject">Subject</label>
+        <select id="contact-subject">
+          <option>General Question</option>
+          <option>Collaboration / PR</option>
+          <option>Advertise on the Blog</option>
+          <option>Content Suggestion</option>
+          <option>Money Clarity Session</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="contact-message">Your Message</label>
+        <textarea id="contact-message" placeholder="Tell me what's on your mind..." required></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send Message →</button>
+    </form>
+  </div>
+</main>
+
+
+<!-- ════════════════════════════════════════
+     PAGE: PRIVACY POLICY
+════════════════════════════════════════ -->
+<main id="page-privacy" class="page" role="main">
+  <div class="container">
+    <div class="policy-wrap">
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last updated: March 1, 2025</p>
+
+      <p>Welcome to Just a Girl in Finance ("we," "us," or "our"). This Privacy Policy explains how we collect, use, and share information about you when you visit our website at [yourwebsite.com].</p>
+
+      <h2>1. Information We Collect</h2>
+      <p>We collect information you provide directly, such as when you subscribe to our newsletter or contact us via our contact form. This may include your name and email address. We also automatically collect certain information when you visit our site, including your IP address, browser type, pages viewed, and time spent on pages.</p>
+
+      <h2>2. Cookies & Tracking Technologies</h2>
+      <p>We use cookies and similar technologies to improve your experience on our website. Cookies are small data files stored on your device. We use:</p>
+      <ul>
+        <li><strong>Essential cookies</strong> — required for the site to function</li>
+        <li><strong>Analytics cookies</strong> — to understand how visitors use our site (Google Analytics)</li>
+        <li><strong>Advertising cookies</strong> — to serve relevant advertisements (Google AdSense)</li>
+      </ul>
+      <p>You can disable cookies in your browser settings. Note that some features of the site may not function properly if cookies are disabled.</p>
+
+      <h2>3. Google AdSense & Advertising</h2>
+      <p>We use Google AdSense to display advertisements on our website. Google, as a third-party vendor, uses cookies to serve ads based on your prior visits to our website or other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your visit to our site. You may opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener" style="color:var(--rosegold);">Google's Ad Settings</a>.</p>
+
+      <h2>4. How We Use Your Information</h2>
+      <p>We use the information we collect to: provide and improve our website; send you our newsletter (if subscribed); respond to your enquiries; and analyse site usage to improve content.</p>
+
+      <h2>5. Newsletter & Email Communications</h2>
+      <p>If you subscribe to our newsletter, we will use your email address to send you our weekly Money Notes newsletter. You can unsubscribe at any time by clicking the unsubscribe link in any email. We will never sell your email address to third parties.</p>
+
+      <h2>6. Third-Party Links</h2>
+      <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of those sites. We encourage you to read the privacy policies of any third-party sites you visit.</p>
+
+      <h2>7. Affiliate Disclosure</h2>
+      <p>Some links on this website are affiliate links. This means we may earn a small commission if you make a purchase or sign up through our link, at no extra cost to you. We only recommend products and services we genuinely use and believe in. All affiliate relationships are disclosed where relevant.</p>
+
+      <h2>8. Financial Disclaimer</h2>
+      <p>The content on this website is for informational and educational purposes only. It does not constitute financial advice. Always consult with a qualified financial advisor before making investment decisions. Past performance is not indicative of future results.</p>
+
+      <h2>9. Data Security</h2>
+      <p>We take reasonable precautions to protect your personal information. However, no method of transmission over the internet is 100% secure.</p>
+
+      <h2>10. Your Rights</h2>
+      <p>You have the right to access, correct, or delete your personal information. To make a request, please contact us via our Contact page. South African residents have rights under the Protection of Personal Information Act (POPIA).</p>
+
+      <h2>11. Contact Us</h2>
+      <p>If you have questions about this Privacy Policy, please <a href="#" onclick="navigate('contact');return false;" style="color:var(--rosegold);">contact us here</a>.</p>
+    </div>
+  </div>
+</main>
+
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer role="contentinfo">
+  <div class="container">
+    <!-- Footer ad -->
+    <div class="footer-ad">
+      <div class="ad-slot ad-footer" role="complementary" aria-label="Advertisement">
+        <div class="ad-icon">📢</div><span>AdSense — Footer Leaderboard (728×90)</span>
+      </div>
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-top">Just a <span class="logo-accent">Girl</span> in Finance</span>
+          <span class="logo-sub">Smart Money · Real Talk · Rose Gold Vibes</span>
+        </div>
+        <p>Demystifying investing, wealth-building, and making money online for women who want more. No finance degree required.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#" onclick="navigate('home');return false;">Home</a></li>
+          <li><a href="#" onclick="navigate('blog');return false;">Blog</a></li>
+          <li><a href="#" onclick="navigate('about');return false;">About</a></li>
+          <li><a href="#" onclick="navigate('contact');return false;">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Topics</h4>
+        <ul>
+          <li><a href="#" onclick="navigate('blog');return false;">Investing 101</a></li>
+          <li><a href="#" onclick="navigate('blog');return false;">Easy Equities</a></li>
+          <li><a href="#" onclick="navigate('blog');return false;">Make Money Online</a></li>
+          <li><a href="#" onclick="navigate('blog');return false;">Budgeting</a></li>
+          <li><a href="#" onclick="navigate('blog');return false;">Crypto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#" onclick="navigate('privacy');return false;">Privacy Policy</a></li>
+          <li><a href="#" onclick="navigate('privacy');return false;">Affiliate Disclosure</a></li>
+          <li><a href="#" onclick="navigate('privacy');return false;">Disclaimer</a></li>
+          <li><a href="#" onclick="navigate('contact');return false;">Advertise</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Just a Girl in Finance. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#" onclick="navigate('privacy');return false;">Privacy Policy</a>
+        <a href="#" onclick="navigate('privacy');return false;">Disclaimer</a>
+        <a href="#" onclick="navigate('contact');return false;">Contact</a>
+      </div>
+      <span>Not financial advice. For informational purposes only.</span>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  /* ══════════ NAVIGATION ══════════ */
+  function navigate(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const target = document.getElementById('page-' + page);
+    if (target) {
+      target.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    // Update active nav link
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    const map = { home: 0, blog: 1, about: 2, contact: 3, privacy: 4 };
+    const links = document.querySelectorAll('nav a');
+    if (map[page] !== undefined) links[map[page]]?.classList.add('active');
+    if (page.startsWith('article')) links[1]?.classList.add('active');
+    initReveal();
+  }
+
+  /* ══════════ HAMBURGER ══════════ */
+  function toggleNav() {
+    const nav = document.getElementById('mainNav');
+    nav.classList.toggle('open');
+  }
+  // Close nav on link click
+  document.querySelectorAll('nav a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('mainNav').classList.remove('open'));
+  });
+
+  /* ══════════ FAQ TOGGLE ══════════ */
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const isOpen = el.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    if (!isOpen) {
+      el.classList.add('open');
+      answer.classList.add('open');
+    }
+  }
+
+  /* ══════════ CATEGORY CHIPS ══════════ */
+  document.querySelectorAll('.cat-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      pill.closest('.categories-inner, .categories-bar .container .categories-inner, div').querySelectorAll?.('.cat-pill')
+        .forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+    });
+  });
+
+  /* ══════════ SCROLL REVEAL ══════════ */
+  function initReveal() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
+  }
+  initReveal();
+
+  /* ══════════ CONTACT FORM ══════════ */
+  function handleContactSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = '✓ Message Sent! I\'ll be in touch soon 💌';
+    btn.style.background = 'var(--deep)';
+    btn.disabled = true;
+  }
+
+  /* ══════════ SMOOTH CAT PILLS ══════════ */
+  // Re-attach pill listeners after page navigation
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('cat-pill')) {
+      const parent = e.target.parentElement;
+      parent.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+      e.target.classList.add('active');
+    }
+  });
+</script>
+
+
+<script>
+function subscribeBrevo(inputId, btnId) {
+  var email = document.getElementById(inputId).value.trim();
+  var btn = document.getElementById(btnId);
+  if (!email || !email.includes('@')) {
+    alert('Please enter a valid email address 💌');
+    return;
+  }
+  // Open Brevo form in a small popup
+  var w = window.open('https://edfbe9a6.sibforms.com/serve/MUIFAPiio7SqifARrQM0wQDLGwomOSwANx-hCQI0Ip0lvW1Rm_xqlkhCtUn8JJ1mYrDryaM5PzEyZ0IZZ9Ta50Zorrz9NnAemRu4nn7EFsgB2AaiHyc0re1Ft5-VewvLaI-R9f_Y2YPODKn1xqmTs6XL4N4W6AED2OK8C7kQOvhSlltS8nR4iH26x0VPgT696OZYxiySPOhm7ZKA5A==', 'brevo', 'width=500,height=600,scrollbars=yes');
+  btn.textContent = '✓ You\'re in, queen! 👑';
+  btn.style.background = '#8b4f3f';
+  btn.disabled = true;
+}
+
+function subscribeBrevoMain() {
+  var email = document.getElementById('main-newsletter-email').value.trim();
+  if (!email || !email.includes('@')) {
+    alert('Please enter a valid email address 💌');
+    return;
+  }
+  window.open('https://edfbe9a6.sibforms.com/serve/MUIFAPiio7SqifARrQM0wQDLGwomOSwANx-hCQI0Ip0lvW1Rm_xqlkhCtUn8JJ1mYrDryaM5PzEyZ0IZZ9Ta50Zorrz9NnAemRu4nn7EFsgB2AaiHyc0re1Ft5-VewvLaI-R9f_Y2YPODKn1xqmTs6XL4N4W6AED2OK8C7kQOvhSlltS8nR4iH26x0VPgT696OZYxiySPOhm7ZKA5A==', 'brevo', 'width=500,height=600,scrollbars=yes');
+  var btn = document.getElementById('main-newsletter-btn');
+  btn.textContent = '✓ Subscribed! 👑';
+  btn.style.background = '#8b4f3f';
+  btn.disabled = true;
+}
+</script>
+
+</body>
+</html>
